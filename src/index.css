@@ -16,6 +16,13 @@
     body{
       font-family: Dirooz;
       direction: rtl;
+      color:#525252;
       background-color:#fdfdfd46 ;
+      overflow: hidden;
     }
+}
+
+@layer components{
+
+  
 }
