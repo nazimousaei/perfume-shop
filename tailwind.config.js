@@ -9,7 +9,6 @@ export default {
         'Dinar':['Dinar']
       },
       colors:{
-        lightPurple:'#EDE4FF',
         lightOrange:'#fed9ad',
         lightPink:'#ffe7cb80'
       }

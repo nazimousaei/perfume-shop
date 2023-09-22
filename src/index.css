@@ -4,25 +4,41 @@
 
 @layer base {
     @font-face {
-        font-family:Dirooz ;
+        font-family: Dirooz;
         src: url(/fonts/Dirooz-FD.ttf) format(truetype);
     }
 
     @font-face {
-        font-family:Dinar;
+        font-family: Dinar;
         src: url(/fonts/Far_Dinar_Two_Medium.ttf) format(truetype);
     }
 
-    body{
-      font-family: Dirooz;
-      direction: rtl;
-      color:#525252;
-      background-color:#fdfdfd46 ;
-      overflow: hidden;
+    body {
+        font-family: Dirooz;
+        direction: rtl;
+        color: #525252;
+        background-color: #fdfdfd46;
+        overflow: hidden;
     }
 }
 
-@layer components{
 
-  
+@layer utilities {
+    .title-shadow {
+        text-shadow: .3rem .4rem .3rem #eea5d38b;
+    }
+}
+
+@layer components {
+
+    .header {
+        overflow: hidden;
+        background-image: linear-gradient(245deg, rgba(249, 213, 184, 0.247), rgba(254, 218, 173, 0.29)), url('./img/header.jpg');
+        background-repeat: no-repeat;
+        background-position: right 35%;
+        /* background-size: 70% 100%; */
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+        direction: ltr;
+    }
+
 }
