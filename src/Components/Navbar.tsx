@@ -37,12 +37,12 @@ export default function Navbar() {
           </Link>
         </ul>
       </div>
-      <div className='flex items-center  sm:gap-x-2'>
-        <div className='relative ml-3 bg-black text-white p-1.5 sm:p-2 rounded-md'>
+      <div className='flex items-center sm:gap-x-2'>
+        <div className='relative  bg-black text-white p-1.5 sm:p-2 rounded-md'>
           <BsFillBasket2Fill className='text-lg sm:text-[1.6rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-500'>0</span>
         </div>
-        <div className='relative ml-[3.5rem] sm:ml-20'>
+        <div className='relative ml-[3rem] sm:ml-20'>
           <BiSolidBookmarkHeart className='text-black text-4xl sm:text-[3.2rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-500'>2</span>
         </div>
