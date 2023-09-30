@@ -44,5 +44,5 @@
         @apply font-bold text-center xsm:text-start  text-2xl md:text-[1.55rem] tracking-wide relative before:content-[url('/img/title.png')]
           before:absolute before:-bottom-14 before:right-[12px] before:w-full
     }
-
+    
 }
