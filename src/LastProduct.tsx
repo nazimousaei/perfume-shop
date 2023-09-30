@@ -1,20 +1,20 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import ProductCard from './ProductCard';
+import ProductCard from './Components/ProductCard';
 import 'swiper/css';
 
 import 'swiper/css/autoplay';
 
 
-export default function BestSelling() {
+export default function LastProduct() {
     return (
         <div className="pt-28 px-7 xsm:px-14">
             <h1 className="title-section ">
-                پر فروش ترین ها
+               جدید ترین ها
             </h1>
-          
+
             <div className="mt-32 rounded-lg shadow-2xl shadow-black/10">
-                  <Swiper
+                <Swiper
                     loop={true}
                     slidesPerView={4}
                     modules={[Autoplay]}
@@ -27,7 +27,7 @@ export default function BestSelling() {
                         100: {
                             slidesPerView: 1,
                         },
-                        580:{
+                        580: {
                             slidesPerView: 2,
                             spaceBetween: 10,
                         },
@@ -47,14 +47,14 @@ export default function BestSelling() {
 
                     className="mySwiper w-full h-full"
                 >
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
                 </Swiper >
 
             </div>

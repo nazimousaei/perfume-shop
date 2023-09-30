@@ -1,7 +1,7 @@
 import Header from '../Components/Header'
 import Category from '../Components/Category'
 import BestSelling from '../Components/BestSelling'
-
+import LastProduct from '../LastProduct'
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
      <Header/>
      <Category/>
      <BestSelling/>
+     <LastProduct/>
     </div>
   )
 }

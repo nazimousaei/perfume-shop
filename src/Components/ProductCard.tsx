@@ -3,7 +3,7 @@ import { MdAddCircle } from 'react-icons/md'
 
 export default function ProductCard() {
     return (
-        <div className="shadow-lg shadow-zinc-300/10">
+        <div>
             <div className='relative  h-[250px] flex justify-center items-center bg-neutral-50 rounded-t-lg '>
                 <FaHeart className='absolute top-6 right-6 text-3xl text-red-500' />
                 <img src='/img/perf-1.png' className='w-1/2 h-2/3 drop-shadow-xl' alt='product' />
@@ -18,10 +18,10 @@ export default function ProductCard() {
                     ۵۶۸۰۰۰۰۰ تومان
                 </p>
                 <div className='flex justify-center items-center'>
-                    <MdAddCircle className='text-4xl text-black cursor-pointer' />
+                    <MdAddCircle className='text-4xl text-black cursor-pointer hover:text-pink-500' />
                     <div className='flex text-xs  '>
                         <span className='flex justify-start items-center ps-1 bg-neutral-100 cursor-pointer w-[62px] h-7 rounded-full -translate-x-10 text-pink-500'>۱۰۰ ml</span>
-                        <span className='flex justify-center items-center bg-black cursor-pointer text-center text-white w-[51px] h-7 rounded-full  -translate-x-5'>۵ ml</span>
+                        <span className='flex justify-center items-center bg-black hover:bg-pink-500 cursor-pointer text-center text-white w-[51px] h-7 rounded-full  -translate-x-5'>۵ ml</span>
                         <span className='flex justify-end items-center pe-1 bg-neutral-100 cursor-pointer w-[62px] h-7 rounded-full text-pink-500' >۱.۸ ml</span>
                     </div>
 
