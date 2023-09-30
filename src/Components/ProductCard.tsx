@@ -4,11 +4,11 @@ import { MdAddCircle } from 'react-icons/md'
 export default function ProductCard() {
     return (
         <div>
-            <div className='relative  h-[250px] flex justify-center items-center bg-neutral-50 rounded-t-lg '>
+            <div className='relative  h-[250px] flex justify-center items-center bg-neutral-100 rounded-t-lg '>
                 <FaHeart className='absolute top-6 right-6 text-3xl text-red-500' />
                 <img src='/img/perf-1.png' className='w-1/2 h-2/3 drop-shadow-xl' alt='product' />
             </div>
-            <div className='p-3 flex flex-col gap-y-3 justify-between items-center rounded-b-lg'>
+            <div className='p-3 flex flex-col gap-y-3 justify-between items-center rounded-b-lg bg-white'>
                 <h3 className='font-semibold text-center font-mono tracking-wide'>
                     میس دیورادوپرفیوم زنانه
                     <span className='block text-center pt-1 text-md font-medium'>Dior</span>

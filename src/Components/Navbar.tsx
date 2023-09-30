@@ -13,27 +13,27 @@ export default function Navbar() {
   return (
     <div className='flex justify-between items-center p-4 px-4 sm:px-10'>
       <div>
-        <GiHamburgerMenu className='text-4xl sm:text-5xl text-pink-500 lg:hidden' />
+        <GiHamburgerMenu className='text-4xl sm:text-5xl text-black lg:hidden' />
         <ul className='hidden lg:flex gap-x-10 text-sm justify-center items-center font-semibold'>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <BiHomeSmile className='text-pink-500 text-4xl' />
-            <li>خانه</li>
+            <BiHomeSmile className='text-black text-4xl' />
+            <li className='text-pink-500'>خانه</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <TbPerfume className='text-pink-500 text-4xl' />
-            <li>محصولات</li>
+            <TbPerfume className='text-black text-4xl' />
+            <li className='text-pink-500'>محصولات</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <PiArticleBold className='text-pink-500 text-4xl' />
-            <li>مقالات</li>
+            <PiArticleBold className='text-black text-4xl' />
+            <li className='text-pink-500'>مقالات</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <PiChalkboardTeacherBold className='text-pink-500 text-4xl' />
-            <li>درباره ما</li>
+            <PiChalkboardTeacherBold className='text-black text-4xl' />
+            <li className='text-pink-500'>درباره ما</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <MdOutlineContactPhone className='text-pink-500 text-4xl' />
-            <li>تماس با ما</li>
+            <MdOutlineContactPhone className='text-black text-4xl' />
+            <li className='text-pink-500'>تماس با ما</li>
           </Link>
         </ul>
       </div>

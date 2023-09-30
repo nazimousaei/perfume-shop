@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import ProductCard from './Components/ProductCard';
+import ProductCard from './ProductCard';
 import 'swiper/css';
 
 import 'swiper/css/autoplay';
@@ -13,7 +13,7 @@ export default function LastProduct() {
                جدید ترین ها
             </h1>
 
-            <div className="mt-32 rounded-lg shadow-2xl shadow-black/10">
+            <div className="mt-32">
                 <Swiper
                     loop={true}
                     slidesPerView={4}
@@ -58,7 +58,7 @@ export default function LastProduct() {
                 </Swiper >
 
             </div>
-            <button className='flex justify-center items-center px-8 py-2.5 mx-auto mt-20 rounded-full bg-black text-white hover:bg-pink-500 shadow-2xl shadow-black/10'>مشاهده همه</button>
+            <button className='flex justify-center items-center px-5 py-2 text-sm sm:text-base sm:px-8 sm:py-2.5 mx-auto mt-20 rounded-full bg-black text-white hover:bg-pink-500 shadow-2xl shadow-black/10'>مشاهده همه</button>
         </div >
 
     )

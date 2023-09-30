@@ -1,7 +1,8 @@
 import Header from '../Components/Header'
 import Category from '../Components/Category'
 import BestSelling from '../Components/BestSelling'
-import LastProduct from '../LastProduct'
+import LastProduct from '../Components/LastProduct'
+import AllProduct from '../Components/AllProduct'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
      <Header/>
      <Category/>
      <BestSelling/>
+     <AllProduct/>
      <LastProduct/>
     </div>
   )
