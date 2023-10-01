@@ -40,15 +40,15 @@ export default function Navbar() {
       <div className='flex items-center sm:gap-x-2'>
         <div className='relative  bg-black text-white p-1.5 sm:p-2 rounded-md'>
           <BsFillBasket2Fill className='text-lg sm:text-[1.6rem]' />
-          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-500'>0</span>
+          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-600'>0</span>
         </div>
         <div className='relative ml-[3rem] sm:ml-20'>
           <BiSolidBookmarkHeart className='text-black text-4xl sm:text-[3.2rem]' />
-          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-500'>2</span>
+          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-600'>2</span>
         </div>
         <div className='flex relative font-medium -right-[3rem] sm:-right-16'>
           <Link to={'/signin'}>
-            <button className='w-[4.5rem] sm:w-32 text-sm sm:text-base  py-1.5 sm:py-2 px-4 sm:px-7 text-start text-white bg-pink-500 shadow-md shadow-zinc-500/20 rounded-3xl'>ورود</button>
+            <button className='w-[4.5rem] sm:w-32 text-sm sm:text-base  py-1.5 sm:py-2 px-4 sm:px-7 text-start text-white bg-pink-600 shadow-md shadow-zinc-500/20 rounded-3xl'>ورود</button>
           </Link>
           <Link to={'/register'}>
             <button className=' w-[4.5rem] sm:w-32 absolute z-10 right-[3rem] sm:right-[4.5rem] text-sm sm:text-base py-1.5 sm:py-2 rounded-3xl bg-neutral-50 text-black shadow-md shadow-zinc-500/20 '>ثبت نام</button>

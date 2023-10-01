@@ -4,6 +4,7 @@ import BestSelling from '../Components/BestSelling'
 import LastProduct from '../Components/LastProduct'
 import AllProduct from '../Components/AllProduct'
 import PopularBrand from '../Components/PopularBrands'
+import Description from '../Components/Description'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
      <BestSelling/>
      <PopularBrand/>
      <AllProduct/>
+     <Description/>
      <LastProduct/>
     </div>
   )

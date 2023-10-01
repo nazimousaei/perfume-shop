@@ -58,7 +58,7 @@ export default function LastProduct() {
                 </Swiper >
 
             </div>
-            <button className='flex justify-center items-center px-5 py-2 text-sm sm:text-base sm:px-8 sm:py-2.5 mx-auto mt-20 rounded-full bg-black text-white hover:bg-pink-500 shadow-2xl shadow-black/10'>مشاهده همه</button>
+            <button className='flex justify-center items-center px-5 py-2 text-sm sm:text-base sm:px-8 sm:py-2.5 mx-auto mt-20 rounded-full bg-black text-white hover:bg-pink-600 shadow-2xl shadow-black/10'>مشاهده همه</button>
         </div >
 
     )

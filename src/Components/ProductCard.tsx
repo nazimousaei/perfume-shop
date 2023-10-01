@@ -14,15 +14,15 @@ export default function ProductCard() {
                     <span className='block text-center pt-1 text-md font-medium'>Dior</span>
                 </h3>
 
-                <p className='text-pink-500 text-[1.08rem] '>
+                <p className='text-pink-600 text-[1.08rem] '>
                     ۵۶۸۰۰۰۰۰ تومان
                 </p>
                 <div className='flex justify-center items-center'>
-                    <MdAddCircle className='text-4xl text-black cursor-pointer hover:text-pink-500' />
+                    <MdAddCircle className='text-4xl text-black cursor-pointer hover:text-pink-600' />
                     <div className='flex text-xs  '>
-                        <span className='flex justify-start items-center ps-1 bg-neutral-100 cursor-pointer w-[62px] h-7 rounded-full -translate-x-10 text-pink-500'>۱۰۰ ml</span>
-                        <span className='flex justify-center items-center bg-black hover:bg-pink-500 cursor-pointer text-center text-white w-[51px] h-7 rounded-full  -translate-x-5'>۵ ml</span>
-                        <span className='flex justify-end items-center pe-1 bg-neutral-100 cursor-pointer w-[62px] h-7 rounded-full text-pink-500' >۱.۸ ml</span>
+                        <span className='flex justify-start items-center ps-1 bg-neutral-100 cursor-pointer w-[62px] h-7 rounded-full -translate-x-10 text-pink-600'>۱۰۰ ml</span>
+                        <span className='flex justify-center items-center bg-black hover:bg-pink-600 cursor-pointer text-center text-white w-[51px] h-7 rounded-full  -translate-x-5'>۵ ml</span>
+                        <span className='flex justify-end items-center pe-1 bg-neutral-100 cursor-pointer w-[62px] h-7 rounded-full text-pink-600' >۱.۸ ml</span>
                     </div>
 
                 </div>
