@@ -5,6 +5,7 @@ import LastProduct from '../Components/LastProduct'
 import AllProduct from '../Components/AllProduct'
 import PopularBrand from '../Components/PopularBrands'
 import Description from '../Components/Description'
+import Features from '../Components/Features'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
      <AllProduct/>
      <Description/>
      <LastProduct/>
+     <Features/>
     </div>
   )
 }
