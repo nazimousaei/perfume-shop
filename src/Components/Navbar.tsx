@@ -16,24 +16,24 @@ export default function Navbar() {
         <GiHamburgerMenu className='text-4xl sm:text-5xl text-black lg:hidden' />
         <ul className='hidden lg:flex gap-x-10 text-sm justify-center items-center font-semibold'>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <BiHomeSmile className='text-black text-4xl' />
-            <li className='text-pink-500'>خانه</li>
+            <BiHomeSmile className='text-pink-600 text-4xl' />
+            <li>خانه</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <TbPerfume className='text-black text-4xl' />
-            <li className='text-pink-500'>محصولات</li>
+            <TbPerfume className='text-pink-600 text-4xl' />
+            <li>محصولات</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <PiArticleBold className='text-black text-4xl' />
-            <li className='text-pink-500'>مقالات</li>
+            <PiArticleBold className='text-pink-600 text-4xl' />
+            <li>مقالات</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <PiChalkboardTeacherBold className='text-black text-4xl' />
-            <li className='text-pink-500'>درباره ما</li>
+            <PiChalkboardTeacherBold className='text-pink-600 text-4xl' />
+            <li>درباره ما</li>
           </Link>
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
-            <MdOutlineContactPhone className='text-black text-4xl' />
-            <li className='text-pink-500'>تماس با ما</li>
+            <MdOutlineContactPhone className='text-pink-600 text-4xl' />
+            <li>تماس با ما</li>
           </Link>
         </ul>
       </div>

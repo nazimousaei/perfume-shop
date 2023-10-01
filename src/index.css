@@ -27,6 +27,16 @@
     .title-shadow {
         text-shadow: .3rem .4rem .3rem #ec489a6c;
     }
+
+    .brand-section{
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(50deg, transparent 60% , rgba(225, 222, 222, 0.546) 40%);
+    }
+
+    .text-shadow{
+        text-shadow: .2rem .4rem .3rem rgba(0, 0, 0, 0.896);
+    }
 }
 
 @layer components {

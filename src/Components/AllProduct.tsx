@@ -9,7 +9,7 @@ export default function AllProduct() {
             </h1>
             </div>
            
-            <div className='flex flex-wrap justify-center gap-8 mt-32 py-16 px-8 bg-pink-100 '>
+            <div className='flex flex-wrap justify-center gap-8 mt-32 py-20 px-10 bg-pink-100 '>
                <ProductCard/>
                <ProductCard/>
                <ProductCard/>
