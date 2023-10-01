@@ -6,6 +6,7 @@ import AllProduct from '../Components/AllProduct'
 import PopularBrand from '../Components/PopularBrands'
 import Description from '../Components/Description'
 import Features from '../Components/Features'
+import Footer from '../Components/Footer'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
      <Description/>
      <LastProduct/>
      <Features/>
+     <Footer/>
     </div>
   )
 }
