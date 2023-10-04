@@ -11,10 +11,10 @@ export default function Header() {
           <h1 className=' text-[2.2rem] md:text-[2rem] text-black title-shadow font-Dinar font-bold tracking-wider text-center md:pr-16 lg:pr-14 xl:pr-20  skew-x-[-16deg] lg:-translate-y-7'>
             عطر پارسیس
           </h1>
-          <div className='flex rounded-e-2xl w-4/5 items-center mt-20 lg:mt-7 md:mr-16 xl:mr-32 md:skew-x-[-16deg] shadow-lg shadow-black-20'>
-            <BiSearchAlt className='text-white bg-black h-[2.2rem] w-14 py-1 rounded-s-2xl ' />
+          <div className='flex rounded-2xl w-4/5 items-center mt-20 md:mt-10 lg:mt-7 md:mr-16 xl:mr-32 md:skew-x-[-16deg] shadow-lg shadow-black-20'>
+            <BiSearchAlt className='text-white bg-black h-[2.75rem] w-14 py-1 rounded-s-2xl ' />
             <input type='text ' placeholder='search ...'
-              className='w-[89%] px-2 xl:px-4 py-1.5 rounded-e-2xl placeholder-pink-500' />
+              className='w-[89%] px-2 xl:px-4 py-1.5 rounded-e-2xl placeholder-pink-500 outline-0' />
           </div>
 
         </div>

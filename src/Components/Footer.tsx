@@ -5,7 +5,7 @@ import {BsFacebook} from 'react-icons/bs'
 
 export default function Footer() {
   return (
-    <div className="flex flex-col justify-center p-10 sm:p-24 text-white mt-32 bg-black ">
+    <div className="flex flex-col justify-center p-10 sm:p-24 text-white mt-32 bg-zinc-950 ">
         <div className="flex flex-wrap gap-32 justify-center items-center">
             <div>
                 <h4 className="text-center">ما را در شبکه های اجتماعی دنبال کنید</h4>

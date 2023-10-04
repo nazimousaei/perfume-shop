@@ -55,6 +55,13 @@
       border-top-left-radius: 150px;
       border-bottom-right-radius: 150px;
     }
+
+    .shadow-img{
+        background-color:#fff;
+        width: 70%;
+        height: 8rem;
+        object-fit: cover; 
+    }
 }
 
 @layer components {
@@ -72,4 +79,14 @@
         @apply font-bold text-center xsm:text-start text-2xl md:text-[1.55rem] tracking-wide relative before:content-[url('/img/title.png')] before:absolute before:-bottom-14 before:right-[12px] before:w-full
     }
 
+    .modal{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+     
+    }
 }

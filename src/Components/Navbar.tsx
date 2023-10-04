@@ -8,13 +8,40 @@ import { PiChalkboardTeacherBold } from 'react-icons/pi'
 import { PiArticleBold } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import Sidebar from './Sidebar'
+import { useState, useEffect ,useRef} from 'react'
+
+
 
 export default function Navbar() {
+  const [openSidebar, setOpenSidebar] = useState<boolean>(false)
+  const ref=useRef<any>(null)
+
+  useEffect(() => {
+    const closeSidebarHandle = (event:MouseEvent):void => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpenSidebar(false);
+      }
+
+    };
+
+    document.addEventListener('mousedown', closeSidebarHandle)
+
+    return () => {
+
+      document.removeEventListener('mousedown',closeSidebarHandle)
+    }
+  },[ref])
+
   return (
     <div className='flex justify-between items-center p-4 px-4 sm:px-10'>
       <div>
-        <GiHamburgerMenu className='text-4xl sm:text-5xl text-black lg:hidden' />
-        <ul className='hidden lg:flex gap-x-10 text-sm justify-center items-center font-semibold'>
+        <div ref={ref}>
+           <GiHamburgerMenu className='text-4xl sm:text-5xl text-black lg:hidden cursor-pointer' onClick={() => setOpenSidebar(prev => !prev)} />
+        {openSidebar && <Sidebar  setOpenSidebar = {setOpenSidebar}/>}
+        </div>
+       
+        <ul className='hidden lg:flex gap-x-10 text-sm justify-center items-center font-semibold' >
           <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
             <BiHomeSmile className='text-pink-600 text-4xl' />
             <li>خانه</li>
