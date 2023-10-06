@@ -94,4 +94,8 @@
         background-color: rgba(0, 0, 0, 0.7);
      
     }
+
+    .form-item{
+        @apply w-full text-xl py-3 mt-10 text-center placeholder:text-zinc-700 placeholder:text-lg bg-transparent border-b-2 border-zinc-600 outline-none text-pink-600
+    }
 }
