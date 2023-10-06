@@ -1,4 +1,6 @@
 import Navbar from "../Components/Navbar"
+import { Link } from "react-router-dom"
+
 export default function Register() {
   return (
     <>  
@@ -13,7 +15,9 @@ export default function Register() {
 
         <form className="absolute md:top-7 md:left-10  lg:left-32 bg-fuchsia-50/90 2xsm:w-[90%] xsm:w-[80%] sm:w-[55%] md:w-[44%] lg:w-1/3 px-5 xsm:px-10 py-8 flex flex-col items-center  shadow-xl shadow-black/20 rounded-xl font-Dinar">
           <h2 className="text-4xl font-semibold pb-3 text-pink-600">ثبت نام</h2>
-          <p className="text-sm">حساب کاربری دارید ؟ <span className="text-pink-600 cursor-pointer underline">ورود</span></p>
+          <p className="text-sm">حساب کاربری دارید ؟ 
+          <Link to={'/signin'} className=""><span className="text-pink-600 cursor-pointer underline">ورود</span></Link>
+          </p>
           <input type="text" className="form-item mt-5" placeholder="نام کاربری" />
           <input type="text" className="form-item mt-5" placeholder="شماره همراه" />
           <input type="password" className="form-item mt-5" placeholder="رمز عبور" />

@@ -1,4 +1,6 @@
 import Navbar from "../Components/Navbar"
+import { Link } from "react-router-dom"
+
 export default function SingIn() {
   return (
     <>  
@@ -13,7 +15,7 @@ export default function SingIn() {
 
         <form className="absolute md:left-10 lg:left-32 bg-fuchsia-50/90 2xsm:w-[90%] xsm:w-[80%] sm:w-[55%] md:w-[44%] lg:w-1/3 px-5 xsm:px-10 py-14 flex flex-col items-center  shadow-xl shadow-black/20 rounded-xl font-Dinar">
           <h2 className="text-4xl font-semibold pb-8 text-pink-600">ورود</h2>
-          <p className="">حساب کاربری ندارید ؟ <span className="text-pink-600 cursor-pointer underline">ثبت نام</span></p>
+          <p className="">حساب کاربری ندارید ؟ <Link to={'/register'}><span className="text-pink-600 cursor-pointer underline">ثبت نام</span></Link></p>
           <input type="text" className="form-item" placeholder="نام کاربری" />
           <input type="password" className="form-item" placeholder="رمز عبور" />
           <span className="mt-12 mb-2 text-pink-600 cursor-pointer">رمز عبور را فراموش کرده اید ؟</span>

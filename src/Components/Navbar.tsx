@@ -10,12 +10,20 @@ import { Link } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import Sidebar from './Sidebar'
 import { useState, useEffect ,useRef} from 'react'
-
+import Basket from './Basket'
+import Favorite from './Favorite'
 
 
 export default function Navbar() {
   const [openSidebar, setOpenSidebar] = useState<boolean>(false)
+  const [openBasket,setOpenBasket] = useState<boolean>(false)
+  const [openFavorite,setOpenFavorite] = useState<boolean>(false)
+
   const ref=useRef<any>(null)
+  const refTwo=useRef<any>(null)
+  const refThree=useRef<any>(null)
+  
+
 
   useEffect(() => {
     const closeSidebarHandle = (event:MouseEvent):void => {
@@ -27,11 +35,31 @@ export default function Navbar() {
 
     document.addEventListener('mousedown', closeSidebarHandle)
 
+    const closeBasketHandle = (event:MouseEvent):void => {
+      if (refTwo.current && !refTwo.current.contains(event.target)) {
+        setOpenBasket(false);
+      }
+
+    };
+
+    document.addEventListener('mousedown', closeBasketHandle)
+
+    const closeFavoriteHandle = (event:MouseEvent):void => {
+      if (refThree.current && !refThree.current.contains(event.target)) {
+        setOpenFavorite(false);
+      }
+
+    };
+
+    document.addEventListener('mousedown', closeFavoriteHandle)
+
     return () => {
 
       document.removeEventListener('mousedown',closeSidebarHandle)
+      document.removeEventListener('mousedown',closeBasketHandle)
+      document.removeEventListener('mousedown',closeFavoriteHandle)
     }
-  },[ref])
+  },[ref , refTwo , refThree])
 
   return (
     <div className='flex justify-between items-center p-4 px-4 sm:px-10'>
@@ -65,13 +93,15 @@ export default function Navbar() {
         </ul>
       </div>
       <div className='flex items-center sm:gap-x-2'>
-        <div className='relative  bg-black text-white p-1.5 sm:p-2 rounded-md'>
-          <BsFillBasket2Fill className='text-lg sm:text-[1.6rem]' />
+        <div ref={refTwo}  onClick={() => setOpenBasket(true)} className='relative cursor-pointer bg-black text-white p-1.5 sm:p-2 rounded-md'>
+          <BsFillBasket2Fill ref={refTwo} className='text-lg sm:text-[1.6rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-600'>0</span>
+        {openBasket && <Basket setOpenBasket = {setOpenBasket} />}
         </div>
-        <div className='relative ml-[3rem] sm:ml-20'>
+        <div ref={refThree} onClick={() => setOpenFavorite(true)}  className='relative cursor-pointer ml-[3rem] sm:ml-20'>
           <BiSolidBookmarkHeart className='text-black text-4xl sm:text-[3.2rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-600'>2</span>
+          {openFavorite && <Favorite setOpenFavorite={setOpenFavorite}/> }
         </div>
         <div className='flex relative font-medium -right-[3rem] sm:-right-16'>
           <Link to={'/signin'}>
