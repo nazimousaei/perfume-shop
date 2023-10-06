@@ -43,7 +43,7 @@
         border-top-left-radius: 150px;
         transform: skewX(10deg);
         outline:3px solid #333;
-        border:.8rem solid #fff;
+        border:.8rem solid #ffffff;
         border-bottom-right-radius: 200px;
         
     }
@@ -62,6 +62,11 @@
         height: 8rem;
         object-fit: cover; 
     }
+
+    .drop-shadow-img{
+        filter:drop-shadow(-1rem 0 1rem rgba(244, 45, 224, 0.511))
+    }
+
 }
 
 @layer components {
