@@ -15,9 +15,12 @@ import Favorite from './Favorite'
 
 
 export default function Navbar() {
+
   const [openSidebar, setOpenSidebar] = useState<boolean>(false)
   const [openBasket,setOpenBasket] = useState<boolean>(false)
   const [openFavorite,setOpenFavorite] = useState<boolean>(false)
+
+ 
 
   const ref=useRef<any>(null)
   const refTwo=useRef<any>(null)
@@ -41,7 +44,7 @@ export default function Navbar() {
       }
 
     };
-
+ 
     document.addEventListener('mousedown', closeBasketHandle)
 
     const closeFavoriteHandle = (event:MouseEvent):void => {
@@ -93,13 +96,13 @@ export default function Navbar() {
         </ul>
       </div>
       <div className='flex items-center sm:gap-x-2'>
-        <div ref={refTwo}  onClick={() => setOpenBasket(true)} className='relative cursor-pointer bg-black text-white p-1.5 sm:p-2 rounded-md'>
-          <BsFillBasket2Fill ref={refTwo} className='text-lg sm:text-[1.6rem]' />
+        <div ref={refTwo}   className='relative cursor-pointer bg-black text-white p-1.5 sm:p-2 rounded-md'>
+          <BsFillBasket2Fill onClick={() => setOpenBasket(prev=>!prev)} className='text-lg sm:text-[1.6rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-600'>0</span>
         {openBasket && <Basket setOpenBasket = {setOpenBasket} />}
         </div>
-        <div ref={refThree} onClick={() => setOpenFavorite(true)}  className='relative cursor-pointer ml-[3rem] sm:ml-20'>
-          <BiSolidBookmarkHeart className='text-black text-4xl sm:text-[3.2rem]' />
+        <div ref={refThree}   className='relative cursor-pointer ml-[3rem] sm:ml-20'>
+          <BiSolidBookmarkHeart onClick={() => setOpenFavorite(prev=>!prev)} className='text-black text-4xl sm:text-[3.2rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-600'>2</span>
           {openFavorite && <Favorite setOpenFavorite={setOpenFavorite}/> }
         </div>
