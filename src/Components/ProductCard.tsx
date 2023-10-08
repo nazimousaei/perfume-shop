@@ -1,9 +1,10 @@
 import { FaHeart } from 'react-icons/fa'
 import { MdAddCircle } from 'react-icons/md'
+import {Link} from 'react-router-dom'
 
 export default function ProductCard() {
     return (
-        <div>
+        <Link to={'./product'}>
             <div className='relative  h-[250px] flex justify-center items-center bg-neutral-100 rounded-t-lg '>
                 <FaHeart className='absolute top-6 right-6 cursor-pointer text-3xl text-red-500' />
                 <img src='/img/perf-1.png' className='w-1/2 h-2/3 drop-shadow-xl' alt='product' />
@@ -29,6 +30,6 @@ export default function ProductCard() {
 
             </div>
 
-        </div>
+        </Link>
     )
 }

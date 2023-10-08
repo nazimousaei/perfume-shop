@@ -1,7 +1,110 @@
-import React from 'react'
+import BreadCrumb from "../Components/BreadCrumb"
+import Navbar from "../Components/Navbar"
+import { MdOutlineCloudDone } from 'react-icons/md'
+import { MdOutlineDeliveryDining } from 'react-icons/md'
+import { GiReturnArrow } from 'react-icons/gi'
+import { BiSupport } from 'react-icons/bi'
+import { FiHeart } from 'react-icons/fi'
+import { AiFillStar } from 'react-icons/ai'
+import { AiOutlineStar } from 'react-icons/ai'
 
 export default function ProductDetail() {
   return (
-    <div>ProductDetail</div>
+    <div>
+      <Navbar />
+      <div className="pt-8 px-4 sm:px-10 lg:px-14">
+        <div className="mb-8"><BreadCrumb /></div>
+        <div className="flex justify-center gap-x-4 gap-y-14 xl:justify-between flex-wrap items-start">
+          <div className="w-full justify-around xl:w-[64%] flex flex-wrap md:flex-nowrap gap-8 ">
+            <div className="w-full sm:w-[70%] md:w-[47%] h-[24rem] sm:h-[26rem] flex justify-center items-center p-4 xsm:p-7 rounded-lg  border-[1px] border-gray-200">
+              <img src="/img/perf-1.png" className="w-full h-full" alt="perfume" />
+            </div>
+            <div className="w-full md:w-auto px-2">
+              <h1 className="text-2xl ">ادوپرفیوم زنانه میس دیور</h1>
+              <p className="pt-2 uppercase text-stone-500">miss dior for female</p>
+              <div className="flex gap-x-6 pt-5 text-pink-600 font-semibold text-[.95rem]">
+                <p className="">برند : Dior</p>
+                <p className="">دسته بندی : عطر و ادکلن زنانه</p>
+              </div>
+              <div className="pt-5">
+                <h4 className="text-lg font-medium pb-2">ویژگی های محصول</h4>
+                <ul className="text-[.9rem] list-disc list-inside marker:text-pink-600">
+                  <li>ادوپرفیوم</li>
+                  <li>مناسب خانم ها</li>
+                </ul>
+              </div>
+              <div className="flex items-center gap-x-5 pt-5">
+                <p className="font-semibold text-lg text-stone-700">  امتیاز:</p>
+                <div className="flex gap-x-1.5">
+                  <AiFillStar className='text-yellow-300 text-xl' />
+                  <AiFillStar className='text-yellow-300 text-xl' />
+                  <AiFillStar className='text-yellow-300 text-xl' />
+                  <AiFillStar className='text-yellow-300 text-xl' />
+                  <AiOutlineStar className='text-yellow-300 text-xl' />
+                </div>
+              </div>
+
+              <div className="flex items-center flex-wrap gap-4 sm:gap-x-10 pt-8">
+                <p className="font-semibold text-lg text-stone-700">حجم عطر :</p>
+                <form className="flex items-center gap-x-2 text-sm xsm:text-base">
+                  <input type="radio" checked name="perf" id='perf-1' className="accent-black" />
+                  <label htmlFor='perf-1' className="w-12 xsm:w-16">
+                    <img src="/img/perf-1.png" />
+                    <p className="font-semibold text-pink-600">۱۰۰ میل</p>
+                  </label>
+                  <input type="radio" name="perf" id='perf-2' className="accent-black" />
+                  <label htmlFor='perf-2' className="w-12 xsm:w-16">
+                    <img src="/img/perf-1.png" />
+                    <p className="font-semibold text-pink-600">۶۰ میل</p>
+                  </label>
+                  <input type="radio" name="perf" id='perf-3' className="accent-black" />
+                  <label htmlFor='perf-3' className="w-12 xsm:w-16">
+                    <img src="/img/perf-1.png" />
+                    <p className="font-semibold text-pink-600">۵ میل</p>
+                  </label>
+                </form>
+              </div>
+
+            </div>
+          </div>
+          <div className="w-full sm:w-2/3 md:w-[45%] text-base xl:w-[28%] rounded-lg  border-[1px] border-gray-200 p-4 xsm:p-7 xsm:px-10">
+            <ul className="flex flex-col gap-y-3 border-b-[1px] border-gray-200 pb-5">
+              <li className="flex items-center gap-x-4 text-stone-500">
+                <MdOutlineCloudDone className='text-pink-600 text-3xl' />
+                <p className="">ارایه تضمین اصل بودن کالا</p>
+              </li>
+              <li className="flex items-center gap-x-4 text-stone-500">
+                <MdOutlineDeliveryDining className='text-pink-600 text-3xl' />
+                <p className="">ارسال رایگان بالای ۵۰۰۰۰۰ تومان</p>
+              </li>
+              <li className="flex items-center gap-x-4 text-stone-500">
+                <GiReturnArrow className='text-pink-600 text-3xl' />
+                <p className="">ضمانت بازگشت کالا ۷ روزه</p>
+              </li>
+              <li className="flex items-center gap-x-4 text-stone-500">
+                <BiSupport className='text-pink-600 text-3xl' />
+                <p className="">مشاوره رایگان بگیرید</p>
+              </li>
+            </ul>
+            <div className="w-full text-center pt-5">
+              <p className="text-xl xsm:text-2xl text-pink-600 ">16000000 تومان</p>
+              <div className="flex items-center justify-between pt-5">
+                <div className="flex">
+                  <button className="bg-black text-white w-10 h-6 xsm:w-14 xsm:h-8 flex justify-center items-center text-lg xsm:text-xl rounded-s-md">+</button>
+                  <div className="bg-white text-black w-10 h-6 xsm:w-16 xsm:h-8 text-base flex justify-center items-center">2</div>
+                  <button className="bg-black text-white w-10 h-6 xsm:w-14 xsm:h-8 flex justify-center items-center text-3xl rounded-e-md">-</button>
+                </div>
+                <div className=" rounded-lg p-2 cursor-pointer">
+                  <FiHeart className='text-pink-600 text-3xl font-semibold' />
+                </div>
+              </div>
+              <button className="w-full mt-5 h-11 text-base xsm:text-lg text-white bg-pink-600 rounded-lg">افزودن به سبد خرید</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   )
 }
