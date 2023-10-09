@@ -1,5 +1,6 @@
 import BreadCrumb from "../Components/BreadCrumb"
 import Navbar from "../Components/Navbar"
+import Footer from "../Components/Footer"
 import { MdOutlineCloudDone } from 'react-icons/md'
 import { MdOutlineDeliveryDining } from 'react-icons/md'
 import { GiReturnArrow } from 'react-icons/gi'
@@ -7,8 +8,13 @@ import { BiSupport } from 'react-icons/bi'
 import { FiHeart } from 'react-icons/fi'
 import { AiFillStar } from 'react-icons/ai'
 import { AiOutlineStar } from 'react-icons/ai'
+import InfoProduct from "../Components/InfoProduct"
+import DescriptionProduct from "../Components/DescriptionProduct"
+import { useState } from "react"
 
 export default function ProductDetail() {
+  const [btnActive, setBtnActive] = useState<string>('btn1')
+
   return (
     <div>
       <Navbar />
@@ -50,21 +56,20 @@ export default function ProductDetail() {
                   <input type="radio" checked name="perf" id='perf-1' className="accent-black" />
                   <label htmlFor='perf-1' className="w-12 xsm:w-16">
                     <img src="/img/perf-1.png" />
-                    <p className="font-semibold text-pink-600">۱۰۰ میل</p>
+                    <p className="font-semibold text-pink-600 text-cener">۱۰۰ میل</p>
                   </label>
                   <input type="radio" name="perf" id='perf-2' className="accent-black" />
                   <label htmlFor='perf-2' className="w-12 xsm:w-16">
                     <img src="/img/perf-1.png" />
-                    <p className="font-semibold text-pink-600">۶۰ میل</p>
+                    <p className="font-semibold text-pink-600 text-center">۶۰ میل</p>
                   </label>
                   <input type="radio" name="perf" id='perf-3' className="accent-black" />
                   <label htmlFor='perf-3' className="w-12 xsm:w-16">
                     <img src="/img/perf-1.png" />
-                    <p className="font-semibold text-pink-600">۵ میل</p>
+                    <p className="font-semibold text-pink-600 text-center">۵ میل</p>
                   </label>
                 </form>
               </div>
-
             </div>
           </div>
           <div className="w-full sm:w-2/3 md:w-[45%] text-base xl:w-[28%] rounded-lg  border-[1px] border-gray-200 p-4 xsm:p-7 xsm:px-10">
@@ -102,9 +107,22 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col justify-center items-center pt-32 px-4 sm:px-10 lg:px-14 gay-y-8">
+        <div className='flex justify-center items-center py-5 px-0 sm:p-7 border-[1px] border-stone-300 rounded-2xl  text-stone-500 text-sm xsm:text-[1.1rem]'>
+          <button onClick={() => setBtnActive('btn1')} className={`px-4 md:px-8 ${btnActive === 'btn1' && 'text-pink-600'}`}>مشخصات محصول</button>
+          <button onClick={() => setBtnActive('btn2')} className={`px-4 md:px-8 border-x-2 border-pink-600 ${btnActive === 'btn2' && 'text-pink-600'}`}>توضیحات محصول</button>
+          <button onClick={() => setBtnActive('btn3')} className={`px-4 md:px-8 ${btnActive === 'btn3' && 'text-pink-600'}`}>راهنمای استفاده</button>
+        </div>
+        <div className="w-full sm:w-[90%] md:w-[70%] xl:w-[55%] mt-10 pt-10 border-t-[1px] border-stone-300">
+          {
+            btnActive === 'btn1' ? <InfoProduct/> : btnActive==='btn2'? <DescriptionProduct/> :btnActive==='btn3' && <div className="text-justify leading-9  sm:leading-10 text-base sm:text-lg px-4">
+              در ابتدا "نکته ی حائز اهمیت این است که هرگز عطر خود را در معرض نور و گرمای مستقیم قرار ندهید و حتی المقدور تلاش کنید تا عطر داخل جعبه ی خود نگهداری شود. عطر را از فاصله ی 15 الی 30 سانتی متری روی پوست پاف کنید تا پخش بوی قابل قبولی داشته باشید. این فاصله ی 15 تا 30 سانتی متری بستگی به نوع اسپری(Vaporisateur) عطر می باشد که در برند های مختلف متنوع است. نکته ی مهم دیگر چگونگی اولین پاف عطر است: حتماً می بایست پاف اول عطر را بصورت مستقیم و محکم اسپری کرد تا تعادل فشار برقرار شود. در صورت عدم پاف محکم و یا کج کردن عطر به هنگام اولین پاف، ممکن است عطر شما دچار نشطی اندکی به اندازه ی کمتر از 2 میل شود. سعی کنید 1 الی 3 پاف اول عطر را برای اینکه بتوانید بصورت مستقیم اسپری کنید روی بدن نزنید. در این حالت می توانید عطر را روی کف یک دست قرار داده و با دست دیگر محکم پاف کنید، زمانیکه می خواهید عطر را برای 3مرتبه اول محکم پاف کنید برای پیشگیری سقوط شیشه عطر از دستانتان می توانید از میز یا کابینت آشپزخانه برای ایستایی مطمن آن استفاده کنید.
+            </div> }
+        </div>
 
       </div>
-
+      <Footer />
     </div>
   )
 }
