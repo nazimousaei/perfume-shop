@@ -10,6 +10,8 @@ import { AiFillStar } from 'react-icons/ai'
 import { AiOutlineStar } from 'react-icons/ai'
 import InfoProduct from "../Components/InfoProduct"
 import DescriptionProduct from "../Components/DescriptionProduct"
+import Textarea from '../Components/Textarea'
+import Comment from '../Components/Comment'
 import { useState } from "react"
 
 export default function ProductDetail() {
@@ -22,13 +24,13 @@ export default function ProductDetail() {
         <div className="mb-8"><BreadCrumb /></div>
         <div className="flex justify-center gap-x-4 gap-y-14 xl:justify-between flex-wrap items-start">
           <div className="w-full justify-around xl:w-[64%] flex flex-wrap md:flex-nowrap gap-8 ">
-            <div className="w-full sm:w-[70%] md:w-[47%] h-[24rem] sm:h-[26rem] flex justify-center items-center p-4 xsm:p-7 rounded-lg  border-[1px] border-gray-200">
+            <div className="w-full sm:w-[70%] md:w-[47%] h-[24rem] sm:h-[27rem] flex justify-center items-center p-4 xsm:p-7 rounded-lg  border-[1px] border-gray-200">
               <img src="/img/perf-1.png" className="w-full h-full" alt="perfume" />
             </div>
             <div className="w-full md:w-auto px-2">
               <h1 className="text-2xl ">ادوپرفیوم زنانه میس دیور</h1>
               <p className="pt-2 uppercase text-stone-500">miss dior for female</p>
-              <div className="flex gap-x-6 pt-5 text-pink-600 font-semibold text-[.95rem]">
+              <div className="flex gap-x-6 pt-5 text-pink-600 font-semibold">
                 <p className="">برند : Dior</p>
                 <p className="">دسته بندی : عطر و ادکلن زنانه</p>
               </div>
@@ -73,7 +75,7 @@ export default function ProductDetail() {
             </div>
           </div>
           <div className="w-full sm:w-2/3 md:w-[45%] text-base xl:w-[28%] rounded-lg  border-[1px] border-gray-200 p-4 xsm:p-7 xsm:px-10">
-            <ul className="flex flex-col gap-y-3 border-b-[1px] border-gray-200 pb-5">
+            <ul className="flex flex-col gap-y-4 border-b-[1px] border-gray-200 pb-5">
               <li className="flex items-center gap-x-4 text-stone-500">
                 <MdOutlineCloudDone className='text-pink-600 text-3xl' />
                 <p className="">ارایه تضمین اصل بودن کالا</p>
@@ -119,6 +121,19 @@ export default function ProductDetail() {
             btnActive === 'btn1' ? <InfoProduct/> : btnActive==='btn2'? <DescriptionProduct/> :btnActive==='btn3' && <div className="text-justify leading-9  sm:leading-10 text-base sm:text-lg px-4">
               در ابتدا "نکته ی حائز اهمیت این است که هرگز عطر خود را در معرض نور و گرمای مستقیم قرار ندهید و حتی المقدور تلاش کنید تا عطر داخل جعبه ی خود نگهداری شود. عطر را از فاصله ی 15 الی 30 سانتی متری روی پوست پاف کنید تا پخش بوی قابل قبولی داشته باشید. این فاصله ی 15 تا 30 سانتی متری بستگی به نوع اسپری(Vaporisateur) عطر می باشد که در برند های مختلف متنوع است. نکته ی مهم دیگر چگونگی اولین پاف عطر است: حتماً می بایست پاف اول عطر را بصورت مستقیم و محکم اسپری کرد تا تعادل فشار برقرار شود. در صورت عدم پاف محکم و یا کج کردن عطر به هنگام اولین پاف، ممکن است عطر شما دچار نشطی اندکی به اندازه ی کمتر از 2 میل شود. سعی کنید 1 الی 3 پاف اول عطر را برای اینکه بتوانید بصورت مستقیم اسپری کنید روی بدن نزنید. در این حالت می توانید عطر را روی کف یک دست قرار داده و با دست دیگر محکم پاف کنید، زمانیکه می خواهید عطر را برای 3مرتبه اول محکم پاف کنید برای پیشگیری سقوط شیشه عطر از دستانتان می توانید از میز یا کابینت آشپزخانه برای ایستایی مطمن آن استفاده کنید.
             </div> }
+        </div>
+        <div className="flex flex-col gap-y-5 justify-center items-center w-full md:w-[90%] xl:w-[75%]  pt-32 px-0 sm:px-6 lg:px-14">
+          <h2 className="self-start text-2xl pb-10 text-stone-600">نظرات : </h2>
+          <Comment/>
+          <Comment/>
+          <Comment/>
+          <Comment/>
+          <Comment/>
+          <Comment/>
+          <Comment/>
+          <Comment/>
+          <Comment/>
+          <Textarea/>
         </div>
 
       </div>
