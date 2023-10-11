@@ -13,9 +13,13 @@ import DescriptionProduct from "../Components/DescriptionProduct"
 import Textarea from '../Components/Textarea'
 import Comment from '../Components/Comment'
 import { useState } from "react"
+import { allCommentGetServer } from "../TypeScriptTypes/CommentTypes"
+import useComments from '../CustomHooks/UseComment'
 
 export default function ProductDetail() {
   const [btnActive, setBtnActive] = useState<string>('btn1')
+
+  const {data} = useComments()
 
   return (
     <div>
@@ -124,15 +128,9 @@ export default function ProductDetail() {
         </div>
         <div className="flex flex-col gap-y-5 justify-center items-center w-full md:w-[90%] xl:w-[75%]  pt-32 px-0 sm:px-6 lg:px-14">
           <h2 className="self-start text-2xl pb-10 text-stone-600">نظرات : </h2>
-          <Comment/>
-          <Comment/>
-          <Comment/>
-          <Comment/>
-          <Comment/>
-          <Comment/>
-          <Comment/>
-          <Comment/>
-          <Comment/>
+             {data?.map((comment:allCommentGetServer) => (
+              <Comment {...comment} />
+             ))}
           <Textarea/>
         </div>
 

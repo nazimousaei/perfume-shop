@@ -1,5 +1,5 @@
 export type allProductGetServer = {
-    id:string;
+    id:number;
     name:string;
     title:string;
     price:number;
