@@ -15,10 +15,10 @@ export default function Comment(Props: allCommentGetServer) {
                         <p className='text-lg self-center'>{Props?.user}</p>
                     </div>
                     <div className='flex gap-x-1.5 items-start pt-5 text-yellow-300 text-xl'>
-                        {Array(Props?.star).fill(0).map(item => (
+                        {Array(Props?.star).fill(0).map(() => (
                             <AiFillStar />
                         ))}
-                        {Array(5 - Props?.star).fill(0).map(item => (
+                        {Array(5 - Props?.star).fill(0).map(() => (
                             <AiOutlineStar />
                         ))}
                     </div>

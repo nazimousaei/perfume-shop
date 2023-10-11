@@ -5,7 +5,7 @@ import { allProductGetServer } from '../TypeScriptTypes/ProductsTypes'
 
 export default function ProductCard(Props:allProductGetServer| undefined ) {
     return (
-        <Link to={`./product/${Props?.id}`}>
+        <Link to={`./productInfo/${Props?.id}`}>
             <div className='relative  h-[250px] flex justify-center items-center bg-neutral-100 rounded-t-lg '>
                 <FaHeart className='absolute top-6 right-6 cursor-pointer text-3xl text-red-500' />
                 <img src={Props?.src} className='w-1/2 h-2/3 drop-shadow-xl' alt='product' />

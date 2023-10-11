@@ -11,7 +11,7 @@ type route = {
 
 const routes:route[] = [
     {path:'/' , element:<Home/>},
-    {path:'/product/:id' , element:<ProductDetail/>},
+    {path:'/productInfo/:id' , element:<ProductDetail/>},
     {path:'/register' , element:<Register/>},
     {path:'/signin' , element:<SingIn/>},
 
