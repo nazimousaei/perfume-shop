@@ -2,23 +2,26 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import ProductCard from './ProductCard';
 import 'swiper/css';
-
 import 'swiper/css/autoplay';
+import useData from '../CustomHooks/UseData';
+import { allProductGetServer } from '../TypeScriptTypes/ProductsTypes';
 
 
 export default function LastProduct() {
+
+    const { data } = useData('http://localhost:3000/products?_start=15&_end=25')
+
     return (
-        <div className="pt-28 px-7 xsm:px-14">
+        <div className="pt-28 px-4 xsm:px-14">
             <h1 className="title-section ">
-               جدید ترین ها
+                جدید ترین ها
             </h1>
 
-            <div className="mt-32">
+            <div className="mt-32 flex justify-center">
                 <Swiper
                     loop={true}
                     slidesPerView={4}
                     modules={[Autoplay]}
-                    spaceBetween={20}
                     autoplay={{
                         delay: 2000,
                         disableOnInteraction: false,
@@ -27,7 +30,7 @@ export default function LastProduct() {
                         100: {
                             slidesPerView: 1,
                         },
-                        580: {
+                        580:{
                             slidesPerView: 2,
                             spaceBetween: 10,
                         },
@@ -47,14 +50,11 @@ export default function LastProduct() {
 
                     className="mySwiper w-full h-full"
                 >
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard /></SwiperSlide>
+                    {data?.map((product: allProductGetServer) => (
+                        <SwiperSlide className=''><ProductCard {...product} /></SwiperSlide>
+                    ))}
+
+
                 </Swiper >
 
             </div>

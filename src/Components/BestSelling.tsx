@@ -2,11 +2,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import ProductCard from './ProductCard';
 import 'swiper/css';
-
+import useData from '../CustomHooks/UseData';
+import { allProductGetServer } from '../TypeScriptTypes/ProductsTypes';
 import 'swiper/css/autoplay';
 
 
 export default function BestSelling() {
+
+    const { data } = useData('http://localhost:3000/products?_start=15')
     return (
         <div className="pt-28 px-7 xsm:px-14">
             <h1 className="title-section ">
@@ -47,14 +50,10 @@ export default function BestSelling() {
 
                     className="mySwiper w-full h-full"
                 >
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
-                    <SwiperSlide className=''><ProductCard/></SwiperSlide>
+                        {data?.map((product: allProductGetServer) => (
+                        <SwiperSlide className=''><ProductCard {...product} /></SwiperSlide>
+                    ))}
+
                 </Swiper >
 
             </div>

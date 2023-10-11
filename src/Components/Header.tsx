@@ -5,8 +5,8 @@ export default function Header() {
   return (
     <div>
       <Navbar />
-      <div className='w-full h-[500px] md:h-[450px]  md:bg-[length:70%_100%] md:skew-x-[16deg]  md:translate-x-[5rem] md:rounded-bl-[100px] lg:rounded-bl-[200px] header'>
-        <div className='flex flex-col items-center justify-center md:justify-start gap-y-1rem md:pl-12 lg:pl-16 xl:pl-24 w-[100%] md:w-[30%] h-full bg-fuchsia-100'>
+      <div className='w-full h-[500px] md:h-[450px]  md:bg-[length:70%_100%] md:skew-x-[16deg]  md:translate-x-[5rem] md:rounded-bl-[100px] lg:rounded-bl-[200px] header overflow-x-hidden'>
+        <div className='overflow-x-hidden flex flex-col items-center justify-center md:justify-start gap-y-1rem md:pl-12 lg:pl-16 xl:pl-24 w-[100%] md:w-[30%] h-full bg-fuchsia-100'>
           <img src='/img/logo.png' className='max-w-xs lg:max-w-sm md:skew-x-[-16deg] -mt-20 md:-mt-5' alt='logo' />
           <h1 className=' text-[2.2rem] md:text-[2rem] text-black title-shadow font-Dinar font-bold tracking-wider text-center md:pr-16 lg:pr-14 xl:pr-20  skew-x-[-16deg] lg:-translate-y-7'>
             عطر پارسیس

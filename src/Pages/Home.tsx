@@ -15,7 +15,7 @@ export default function Home() {
      <Category/>
      <BestSelling/>
      <PopularBrand/>
-     <AllProduct/>
+      <AllProduct/>
      <Description/>
      <LastProduct/>
      <Features/>

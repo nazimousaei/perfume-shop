@@ -4,7 +4,7 @@
           "id": 1,
           "name": "میس دیور ادوپرفیوم زنانه",
           "title": "miss-dior",
-          "price": "5600000",
+          "price": 5600000,
           "src": "/img/perf-1.png",
           "category": "female"
       },
@@ -12,7 +12,7 @@
           "id": 2,
           "name": "هرمس ادوپرفیوم مردانه",
           "title": "hermes",
-          "price": "6000000",
+          "price": 6000000,
           "src": "/img/perf-2.png",
           "category": "men"
       },
@@ -20,7 +20,7 @@
           "id": 3,
           "name": "دیلن بلو ادوپرفیوم مردانه",
           "title": "versace",
-          "price": "4200000",
+          "price": 4200000,
           "src": "/img/perf-3.png",
           "category": "men"
       },
@@ -28,7 +28,7 @@
           "id": 4,
           "name": "فلاور بام ادوپرفیوم زنانه",
           "title": "viktoria",
-          "price": "84000000",
+          "price": 84000000,
           "src": "/img/perf-4.png",
           "category":"female"
       },
@@ -36,7 +36,7 @@
           "id": 5,
           "name": "میس دیور ادوپرفیوم زنانه",
           "title": "miss-dior",
-          "price": "1000000",
+          "price": 1000000,
           "src": "/img/perf-5.png",
           "category": "female"
       },
@@ -44,7 +44,7 @@
           "id": 6,
           "name": "هوگو باس ادوپرفیوم مردانه",
           "title": "boss",
-          "price": "9600000",
+          "price": 9600000,
           "src": "/img/perf-6.png",
           "category": "men"
       },
@@ -52,7 +52,7 @@
           "id": 7,
           "name": "گوچی بلوم ادوپرفیوم زنانه",
           "title": "gucci",
-          "price": "3000000",
+          "price": 3000000,
           "src": "/img/perf-7.png",
           "category": "female"
       },
@@ -60,7 +60,7 @@
           "id": 8,
           "name": "لجن امپر ادوپرفیوم مردانه",
           "title": "emper",
-          "price": "12000000",
+          "price": 12000000,
           "src": "/img/perf-8.png",
           "category": "men"
       },
@@ -68,7 +68,7 @@
           "id": 9,
           "name": "کول واتر ادوپرفیوم مردانه",
           "title": "davidoff",
-          "price": "7800000",
+          "price": 7800000,
           "src": "/img/perf-9.png",
           "category": "men"
       },
@@ -76,7 +76,7 @@
           "id": 10,
           "name": "برایت کریستال ادوپرفیوم زنانه",
           "title": "versace",
-          "price": "5900000",
+          "price": 5900000,
           "src": "/img/perf-10.png",
           "category": "female"
       },
@@ -84,7 +84,7 @@
           "id": 11,
           "name": "بور بری بادی ادوپرفیوم زنانه",
           "title": "chanel",
-          "price": "11000000",
+          "price": 11000000,
           "src": "/img/perf-11.png",
           "category": "female"
       },
@@ -92,7 +92,7 @@
           "id": 12,
           "name": "اربا پورا ادوپرفیوم زنانه",
           "title": "xerjeff",
-          "price": "4000000",
+          "price": 4000000,
           "src": "/img/perf-12.png",
           "category": "female"
       },
@@ -100,7 +100,7 @@
           "id": 13,
           "name": "کلاسیک بلو ادوپرفیوم مردانه",
           "title": "jaguar",
-          "price": "3400000",
+          "price": 3400000,
           "src": "/img/perf-13.png",
           "category": "men"
       },
@@ -108,7 +108,7 @@
           "id": 14,
           "name": "پرایوت لیبل ادوپرفیوم زنانه",
           "title": "paris",
-          "price": "7800000",
+          "price": 7800000,
           "src": "/img/perf-14.png",
           "category": "female"
       },
@@ -116,7 +116,7 @@
           "id": 15,
           "name": "آرامیس ادوپرفیوم زنانه",
           "title": "aramis",
-          "price": "3200000",
+          "price": 3200000,
           "src": "/img/perf-15.png",
           "category": "female"
       },
@@ -124,7 +124,7 @@
           "id": 16,
           "name": "کوکو شنل کدوپرفیوم زنانه",
           "title": "chanel",
-          "price": "1000000",
+          "price": 1000000,
           "src": "/img/perf-16.png",
           "category": "female"
       },
@@ -132,7 +132,7 @@
           "id": 17,
           "name": "توسکان ادوپرفیوم زنانه",
           "title": "tom-ford",
-          "price": "1100000",
+          "price": 1100000,
           "src": "/img/perf-17.png",
           "category": "female"
       },
@@ -140,7 +140,7 @@
           "id": 18,
           "name": "دیور ادوپرفیوم زنانه",
           "title": "dior",
-          "price": "5600000",
+          "price": 5600000,
           "src": "/img/perf-18.png",
           "category": "female"
       },
@@ -148,7 +148,7 @@
           "id": 19,
           "name": "اوپرا ادوپرفیوم مردانه",
           "title": "sospiro",
-          "price": "8700000",
+          "price": 8700000,
           "src": "/img/perf-19.png",
           "category": "men"
       },
@@ -156,7 +156,7 @@
           "id": 20,
           "name": "آمبر نویر ادوپرفیوم مردانه",
           "title": "lalique",
-          "price": "9800000",
+          "price": 9800000,
           "src": "/img/perf-20.png",
           "category": "men"
       },
@@ -164,14 +164,14 @@
           "id": 21,
           "name": "میس دیور ادوپرفیوم زنانه",
           "title": "miss-dior",
-          "price": "5600000",
+          "price": 5600000,
           "src": "/img/perf-21.png"
       },
       {
           "id": 22,
           "name": "روورتو ادوپرفیوم مردانه",
           "title": "cavalii",
-          "price": "1200000",
+          "price": 1200000,
           "src": "/img/perf-22.png",
           "category": "men"
       },
@@ -179,7 +179,7 @@
           "id": 23,
           "name": "اکوا دی ادوپرفیوم زنانه",
           "title": "armani",
-          "price": "4500000",
+          "price": 4500000,
           "src": "/img/perf-23.png",
           "category": "female"
       },
@@ -187,7 +187,7 @@
           "id": 24,
           "name": "نیور ادوپرفیوم مردانه",
           "title": "jasmin",
-          "price": "6700000",
+          "price": 6700000,
           "src": "/img/perf-24.png",
           "category": "men"
       },
@@ -195,8 +195,8 @@
           "id": 25,
           "name": "رین ادوپرفیوم زنانه",
           "title": "ajmal",
-          "price": "1200000",
-          "src": "/img/perf-25.png",
+          "price": 1200000,
+          "src": "/img/perf-26.png",
           "category": "female"
       }
   ],
