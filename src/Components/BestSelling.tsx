@@ -2,14 +2,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import ProductCard from './ProductCard';
 import 'swiper/css';
-import useData from '../CustomHooks/UseData';
-import { allProductGetServer } from '../TypeScriptTypes/ProductsTypes';
 import 'swiper/css/autoplay';
-
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react"
+import { getProductsServer } from "../Redux/Store/Products"
+import { AppDispatch, RootState } from "../Redux/Store"
+import { allProductGetServer } from "../TypeScriptTypes/ProductsTypes"
 
 export default function BestSelling() {
 
-    const { data } = useData('http://localhost:3000/products?_start=15')
+    
+    const dispatch = useDispatch<AppDispatch>()
+    const productsData = useSelector<RootState, allProductGetServer[]>((state) => state.products)
+
+    useEffect(() => {
+        dispatch(getProductsServer('http://localhost:3000/products?_start=15&_end=25'))
+    }, [])
+
     return (
         <div className="pt-28 px-7 xsm:px-14">
             <h1 className="title-section ">
@@ -50,10 +59,9 @@ export default function BestSelling() {
 
                     className="mySwiper w-full h-full"
                 >
-                        {data?.map((product: allProductGetServer) => (
-                        <SwiperSlide className=''><ProductCard {...product} /></SwiperSlide>
-                    ))}
-
+                  {productsData?.map((product: allProductGetServer) => (
+                    <SwiperSlide key={product.id}><ProductCard {...product} /></SwiperSlide>
+                ))}
                 </Swiper >
 
             </div>

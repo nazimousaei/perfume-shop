@@ -2,15 +2,16 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-import { QueryClient, QueryClientProvider } from 'react-query'
-
-const client = new QueryClient()
+import { Provider } from 'react-redux'
+import store from './Redux/Store.tsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <QueryClientProvider client={client}>
-        <BrowserRouter>
+    <Provider store={store}>
+         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </QueryClientProvider>
+    </Provider>
+       
+   
 
 )

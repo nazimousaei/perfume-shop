@@ -3,13 +3,20 @@ import { Autoplay } from 'swiper/modules';
 import ProductCard from './ProductCard';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import useData from '../CustomHooks/UseData';
-import { allProductGetServer } from '../TypeScriptTypes/ProductsTypes';
-
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react"
+import { getProductsServer } from "../Redux/Store/Products"
+import { AppDispatch, RootState } from "../Redux/Store"
+import { allProductGetServer } from "../TypeScriptTypes/ProductsTypes"
 
 export default function LastProduct() {
 
-    const { data } = useData('http://localhost:3000/products?_start=15&_end=25')
+    const dispatch = useDispatch<AppDispatch>()
+    const productsData = useSelector<RootState, allProductGetServer[]>((state) => state.products)
+
+    useEffect(() => {
+        dispatch(getProductsServer('http://localhost:3000/products?_start=15&_end=25'))
+    }, [])
 
     return (
         <div className="pt-28 px-4 xsm:px-14">
@@ -50,11 +57,11 @@ export default function LastProduct() {
 
                     className="mySwiper w-full h-full"
                 >
-                    {data?.map((product: allProductGetServer) => (
-                        <SwiperSlide className=''><ProductCard {...product} /></SwiperSlide>
-                    ))}
-
-
+              
+              {productsData?.map((product: allProductGetServer) => (
+                    <SwiperSlide key={product.id}><ProductCard {...product} /></SwiperSlide>
+                ))}
+                       
                 </Swiper >
 
             </div>
