@@ -242,35 +242,40 @@
           "id": 1,
           "name": "میس دیور ادوپرفیوم زنانه",
           "title": "miss-dior",
-          "price": "5600000",
+          "price": 5600000,
+          "count":1,
           "src": "/img/perf-1.png"
       },
       {
           "id": 2,
           "name": "هرمس ادوپرفیوم مردانه",
           "title": "hermes",
-          "price": "6000000",
+          "price": 6000000,
+          "count":1,
           "src": "/img/perf-2.png"
       },
       {
           "id": 3,
           "name": "دیلن بلو ادوپرفیوم مردانه",
           "title": "versace",
-          "price": "4200000",
+          "price": 4200000,
+          "count":3,
           "src": "/img/perf-3.png"
       },
       {
           "id": 4,
           "name": "فلاور بام ادوپرفیوم زنانه",
           "title": "viktoria",
-          "price": "84000000",
+          "price": 84000000,
+          "count":1,
           "src": "/img/perf-4.png"
       },
       {
           "id": 5,
           "name": "میس دیور ادوپرفیوم زنانه",
           "title": "miss-dior",
-          "price": "1000000",
+          "price": 1000000,
+          "count":2,
           "src": "/img/perf-5.png"
       }
   ],
@@ -279,28 +284,28 @@
           "id": 1,
           "name": "میس دیور ادوپرفیوم زنانه",
           "title": "miss-dior",
-          "price": "5600000",
+          "price": 5600000,
           "src": "/img/perf-1.png"
       },
       {
           "id": 2,
           "name": "هرمس ادوپرفیوم مردانه",
           "title": "hermes",
-          "price": "6000000",
+          "price": 6000000,
           "src": "/img/perf-2.png"
       },
       {
           "id": 3,
           "name": "دیلن بلو ادوپرفیوم مردانه",
           "title": "versace",
-          "price": "4200000",
+          "price": 4200000,
           "src": "/img/perf-3.png"
       },
       {
           "id": 4,
           "name": "فلاور بام ادوپرفیوم زنانه",
           "title": "viktoria",
-          "price": "84000000",
+          "price": 84000000,
           "src": "/img/perf-4.png"
       }
   ],

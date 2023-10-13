@@ -1,3 +1,4 @@
+//icons
 import { BiHomeSmile } from 'react-icons/bi'
 import { TbPerfume } from 'react-icons/tb'
 import { BsFillBasket2Fill } from 'react-icons/bs'
@@ -8,17 +9,26 @@ import { PiChalkboardTeacherBold } from 'react-icons/pi'
 import { PiArticleBold } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import Sidebar from './Sidebar'
 import { useState, useEffect ,useRef} from 'react'
+//components
 import Basket from './Basket'
 import Favorite from './Favorite'
-
+import Sidebar from './Sidebar'
+//redux-toolkit & react-redux
+import { useSelector } from "react-redux"
+import { RootState } from "../Redux/Store"
+//typscript types
+import { basketItem } from '../TypeScriptTypes/BasketTypes'
+import { favoriteItem } from '../TypeScriptTypes/FavoritesTypes'
 
 export default function Navbar() {
 
   const [openSidebar, setOpenSidebar] = useState<boolean>(false)
   const [openBasket,setOpenBasket] = useState<boolean>(false)
   const [openFavorite,setOpenFavorite] = useState<boolean>(false)
+
+  const favoritesData = useSelector<RootState, favoriteItem[]>((state) => state.favoriteList)
+  const basketData = useSelector<RootState, basketItem[]>((state) => state.basket)
 
  
 
@@ -98,12 +108,12 @@ export default function Navbar() {
       <div className='flex items-center sm:gap-x-2'>
         <div ref={refTwo}   className='relative cursor-pointer bg-black text-white p-1.5 sm:p-2 rounded-md'>
           <BsFillBasket2Fill onClick={() => setOpenBasket(prev=>!prev)} className='text-lg sm:text-[1.6rem]' />
-          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-600'>0</span>
+          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-600'>{basketData?.length}</span>
         {openBasket && <Basket setOpenBasket = {setOpenBasket} />}
         </div>
         <div ref={refThree}   className='relative cursor-pointer ml-[3rem] sm:ml-20'>
           <BiSolidBookmarkHeart onClick={() => setOpenFavorite(prev=>!prev)} className='text-black text-4xl sm:text-[3.2rem]' />
-          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-600'>2</span>
+          <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-600'>{favoritesData?.length}</span>
           {openFavorite && <Favorite setOpenFavorite={setOpenFavorite}/> }
         </div>
         <div className='flex relative font-medium -right-[3rem] sm:-right-16'>
