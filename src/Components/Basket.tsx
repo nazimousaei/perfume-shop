@@ -19,11 +19,19 @@ export default function Basket({setOpenBasket}:openHandleBasket) {
   useEffect(() => {
       dispatch(getBasketServer())
   }, [])
+
+
+  const totalPrice = basketData.reduce((acc,currentItem)=>{
+    return acc + (currentItem.price*currentItem.count)
+  },0)
+
+
+
   return (
     <div className="w-full sm:w-2/3  lg:w-[45%]  h-full p-4 xsm:p-6 fixed right-0 top-0 z-50 bg-white cursor-pointer overflow-y-auto">
       <Modal />
       <span className="absolute top-3 left-8 bg-pink-600 text-white text-3xl rounded-md" onClick={() => setOpenBasket(false)}><IoMdClose /></span>
-      <div className="flex flex-col gap-y-7 justify-center mt-10">
+      <div className="flex flex-col gap-y-7 justify-center mt-10 pb-80">
         {basketData?.map((basketProduct:basketItem) => (
         <BasketItem key={basketProduct.id} {...basketProduct}/>
        ))}
@@ -34,7 +42,7 @@ export default function Basket({setOpenBasket}:openHandleBasket) {
 
             <div className=" w-full flex justify-center gap-x-10 items-center text-pink-600 text-sm xsm:text-xl font-semibold">
               <p>مبلغ کل : </p>
-              <span>30000000 تومان</span>
+              <span>{totalPrice?.toLocaleString()} تومان </span>
             </div>
             <button className="mt-8 w-1/2 xsm:w-2/3 h-12 text-base xsm:text-lg rounded-lg bg-black text-white flex justify-center items-center">تکمیل خرید</button>
           </div>

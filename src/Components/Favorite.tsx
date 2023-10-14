@@ -21,6 +21,7 @@ export default function Favorite({ setOpenFavorite }: openHandleFavorite) {
     dispatch(getFavoritesServer())
   }, [])
 
+
   return (
     <div className="w-full xsm:w-[85%] sm:w-1/2  lg:w-[35%]  h-full p-4 xsm:p-6 fixed right-0 top-0 z-50 bg-rose-50 cursor-pointer overflow-y-auto">
       <Modal />

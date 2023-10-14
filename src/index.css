@@ -20,7 +20,9 @@
         background-color: #fdfdfd46;
         overflow-x: hidden;
         line-height: 2;
-    }
+    } 
+
+    
 }
 
 
@@ -67,6 +69,9 @@
         filter:drop-shadow(-1rem 0 1rem rgba(244, 45, 224, 0.511))
     }
 
+   .swal-footer{
+        text-align:center !important;
+    }
 }
 
 @layer components {

@@ -17,16 +17,19 @@ import { AiFillStar } from 'react-icons/ai'
 //type script types
 import { allCommentGetServer } from "../TypeScriptTypes/CommentTypes"
 import { infoProductGetServer } from "../TypeScriptTypes/InfoProductTypes"
+import { basketItem } from "../TypeScriptTypes/BasketTypes"
 //react-redux & redux-toolkit
 import { useDispatch, useSelector } from "react-redux"
 import { getCommentsServer } from "../Redux/Store/Comments"
 import { getProductInfoServer } from "../Redux/Store/ProductDetal"
 import { AppDispatch, RootState } from "../Redux/Store"
+import { postBasketServer } from '../Redux/Store/Basket'
 //react & react-router-dom
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { useEffect } from "react"
-
+//sweetaler
+import swal from 'sweetAlert'
 
 //type of useparams hook
 type param = {
@@ -34,7 +37,11 @@ type param = {
 }
 
 export default function ProductDetail() {
+
   const [btnActive, setBtnActive] = useState<string>('btn1')
+
+  const dispatchPostBasketItem = useDispatch<AppDispatch>()
+
   const { id } = useParams<param>()
 
 
@@ -49,6 +56,28 @@ export default function ProductDetail() {
     dispatchProductInfo(getProductInfoServer(id))
 
   }, [])
+
+  const addBasketHandle = () => {
+
+    const newItemBasket:basketItem = {
+        id: productInfoData.id,
+        name: productInfoData.name,
+        title: productInfoData.title,
+        price: productInfoData.price,
+        count:1,
+        src: productInfoData.src
+    }
+
+    dispatchPostBasketItem(postBasketServer(newItemBasket))
+
+    swal({
+        title: 'محصول با موفقیت به سبد خرید افزوده شد',
+        icon: 'success',
+        buttons: ['بستن', 'تایید']
+    })
+
+}
+
 
   return (
     <div>
@@ -132,14 +161,14 @@ export default function ProductDetail() {
               <div className="flex items-center justify-between pt-5">
                 <div className="flex">
                   <button className="bg-black text-white w-10 h-6 xsm:w-14 xsm:h-8 flex justify-center items-center text-lg xsm:text-xl rounded-s-md">+</button>
-                  <div className="bg-white text-black w-10 h-6 xsm:w-16 xsm:h-8 text-base flex justify-center items-center">2</div>
+                  <div className="bg-white text-black w-10 h-6 xsm:w-16 xsm:h-8 text-base flex justify-center items-center">1</div>
                   <button className="bg-black text-white w-10 h-6 xsm:w-14 xsm:h-8 flex justify-center items-center text-3xl rounded-e-md">-</button>
                 </div>
                 <div className=" rounded-lg p-2 cursor-pointer">
                   <FiHeart className='text-pink-600 text-3xl font-semibold' />
                 </div>
               </div>
-              <button className="w-full mt-5 h-11 text-base xsm:text-lg text-white bg-pink-600 rounded-lg">افزودن به سبد خرید</button>
+              <button onClick={addBasketHandle} className="w-full mt-5 h-11 text-base xsm:text-lg text-white bg-pink-600 rounded-lg">افزودن به سبد خرید</button>
             </div>
           </div>
         </div>
