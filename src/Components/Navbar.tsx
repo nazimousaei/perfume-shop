@@ -26,11 +26,10 @@ export default function Navbar() {
   const [openSidebar, setOpenSidebar] = useState<boolean>(false)
   const [openBasket,setOpenBasket] = useState<boolean>(false)
   const [openFavorite,setOpenFavorite] = useState<boolean>(false)
+ 
 
   const favoritesData = useSelector<RootState, favoriteItem[]>((state) => state.favoriteList)
   const basketData = useSelector<RootState, basketItem[]>((state) => state.basket)
-
- 
 
   const ref=useRef<any>(null)
   const refTwo=useRef<any>(null)
@@ -66,6 +65,8 @@ export default function Navbar() {
 
     document.addEventListener('mousedown', closeFavoriteHandle)
 
+   
+
     return () => {
 
       document.removeEventListener('mousedown',closeSidebarHandle)
@@ -87,7 +88,7 @@ export default function Navbar() {
             <BiHomeSmile className='text-pink-600 text-4xl' />
             <li>خانه</li>
           </Link>
-          <Link to={'/'} className='flex flex-col items-center justify-center gap-y-1.5'>
+          <Link to={'/products'} className='flex flex-col items-center justify-center gap-y-1.5'>
             <TbPerfume className='text-pink-600 text-4xl' />
             <li>محصولات</li>
           </Link>

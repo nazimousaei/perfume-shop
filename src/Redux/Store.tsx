@@ -4,6 +4,7 @@ import CommentsReducer from './Store/Comments'
 import ProductInfoReducer from './Store/ProductDetal'
 import FavoritesReducer from './Store/FavoriteList'
 import BasketReducer from './Store/Basket'
+import UsersRegisterReducer from './Store/UserRegister'
 
  const store = configureStore({
     reducer:{
@@ -11,7 +12,8 @@ import BasketReducer from './Store/Basket'
       comments:CommentsReducer,
       productInfo:ProductInfoReducer,
       favoriteList:FavoritesReducer,
-      basket:BasketReducer
+      basket:BasketReducer,
+      usersRegister:UsersRegisterReducer
     }
 })
 

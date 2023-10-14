@@ -249,6 +249,13 @@
       "body": "به عنوان عطر دم دستی خوبه",
       "user": "شیما",
       "star": 4
+    },
+    {
+      "id": 8,
+      "title": "عطر خوب",
+      "body": "خوبه",
+      "user": "نازی",
+      "star": 4
     }
   ],
   "basket": [
@@ -725,6 +732,22 @@
       "price": 1200000,
       "src": "/img/perf-25.png",
       "category": "female"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "nazi",
+      "phone": "09100721833",
+      "password": "Pr_7777777",
+      "repeatPassword": "Pr_7777777"
+    },
+    {
+      "id": 2,
+      "username": "akbar",
+      "phone": "09122893834",
+      "password": "Ak_777777",
+      "repeatPassword": "Ak_777777"
     }
   ]
 }

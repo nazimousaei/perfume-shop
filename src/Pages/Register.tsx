@@ -3,6 +3,12 @@ import { Link } from "react-router-dom"
 import { useForm } from 'react-hook-form'
 import { yupResolver } from "@hookform/resolvers/yup"
 import registerSchema from "../Validations/RegisterSchema"
+import { useNavigate } from "react-router-dom"
+import { userRegisterType } from "../TypeScriptTypes/UserRegisterTypes"
+import { useDispatch ,useSelector} from "react-redux"
+import { AppDispatch ,RootState} from "../Redux/Store"
+import { postUsersServer } from "../Redux/Store/UserRegister"
+import swal from 'sweetAlert'
 
 type FormValues = {
   username: string;
@@ -13,18 +19,53 @@ type FormValues = {
 
 export default function Register() {
 
-  const { register, handleSubmit , reset , formState:{errors}} = useForm({
-    defaultValues:{
+  const navigation = useNavigate()
+  const postUserDispatch = useDispatch<AppDispatch>()
+  const dataUsers: any = useSelector<RootState>(state => state.usersRegister)
+
+  const { register, handleSubmit,getValues ,reset, formState: { errors } } = useForm({
+    defaultValues: {
       username: '',
       phone: '',
       password: '',
       repeatPassword: ''
     },
-   resolver:yupResolver(registerSchema)
+    resolver: yupResolver(registerSchema)
   })
 
+
+ const setCookieUser = ()  => {
+
+  const now = new Date()
+  let expireDay = now.setTime(now.getTime()+10*24*60*60*1000)
+  document.cookie = `username=${getValues(['username'])};path=/;expires=${now}`
+ }
+
   const formSubmitting = (data: FormValues) => {
-    console.log(data)
+
+    const newUser: userRegisterType = {
+      id:dataUsers.length+1,
+      username: data.username,
+      phone: data.phone,
+      password: data.password,
+      repeatPassword: data.password
+    }
+
+    postUserDispatch(postUsersServer(newUser))
+     
+    setCookieUser()
+
+    swal({
+      title: 'ثبت نام با موفقیت انجام شد',
+      icon: 'success',
+      buttons: ['بستن', 'رفتن به صفحه اصلی']
+
+    }).then(result => {
+      if (result) {
+        navigation('/')
+      }
+    })
+
     reset()
   }
 
@@ -53,7 +94,7 @@ export default function Register() {
           <input type="password" {...register('repeatPassword')} className="form-item mt-5" placeholder="تکرار رمز عبور" />
           <span className="text-red-600 text-sm pt-1.5">{errors.repeatPassword && errors.repeatPassword.message}</span>
           <span className="mt-8 mb-4 text-pink-600 cursor-pointer">رمز عبور را فراموش کرده اید ؟</span>
-          <button type="submit"  className={`absolute -bottom-5 bg-black text-white flex justify-center items-start text-xl py-2.5 px-10 rounded-lg`}>ثبت نام</button>
+          <button type="submit" className={`absolute -bottom-5 bg-black text-white flex justify-center items-start text-xl py-2.5 px-10 rounded-lg`}>ثبت نام</button>
         </form>
       </div>
     </>

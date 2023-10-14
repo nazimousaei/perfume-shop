@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { getProductsServer } from "../Redux/Store/Products"
 import { AppDispatch, RootState } from "../Redux/Store"
 import { allProductGetServer } from "../TypeScriptTypes/ProductsTypes"
+import { Link } from "react-router-dom"
 
 export default function AllProduct() {
 
@@ -30,7 +31,9 @@ export default function AllProduct() {
                     </div>
                 ))}
             </div>
-            <button className='flex justify-center items-center px-5 py-2 text-sm sm:text-base sm:px-8 sm:py-2.5 mx-auto mt-20 rounded-full bg-black text-white hover:bg-pink-600 shadow-2xl shadow-black/10'>مشاهده همه</button>
+            <Link to={'/products'}>
+                <button className='flex justify-center items-center px-5 py-2 text-sm sm:text-base sm:px-8 sm:py-2.5 mx-auto mt-20 rounded-full bg-black text-white hover:bg-pink-600 shadow-2xl shadow-black/10'>مشاهده همه</button>
+            </Link>
         </div>
     )
 }
