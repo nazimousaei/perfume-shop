@@ -3,7 +3,7 @@ import {infoProductGetServer} from '../../TypeScriptTypes/InfoProductTypes'
 
 export const getProductInfoServer = createAsyncThunk(
     "productInfo/getProductinfo",
-    async(id:string) => {
+    async(id:string | undefined) => {
         const response = await fetch(`http://localhost:3000/productInfo/${id}`)
         const data = await response.json()
         return data as infoProductGetServer

@@ -5,3 +5,4 @@ export type allCommentGetServer = {
     user:string;
     star:number
 }
+
