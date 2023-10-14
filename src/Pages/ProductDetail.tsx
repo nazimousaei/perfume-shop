@@ -114,7 +114,6 @@ export default function ProductDetail() {
                   ))}  */}
                 </div>
               </div>
-
               <div className="flex items-center flex-wrap gap-4 sm:gap-x-10 pt-8">
                 <p className="font-semibold text-lg text-stone-700">حجم عطر :</p>
                 <form className="flex items-center gap-x-2 text-sm xsm:text-base">
