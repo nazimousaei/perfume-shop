@@ -69,7 +69,6 @@ export default function Register() {
     dataUsers.map((user: userRegisterType) => {
 
       if (user.phone != data.phone) {
-
         postUserDispatch(postUsersServer(newUser))
         setCookieUser()
 

@@ -31,7 +31,7 @@ export default function AllProduct() {
                     </div>
                 ))}
             </div>
-            <Link to={'/products'}>
+            <Link to={'/products/1'}>
                 <button className='flex justify-center items-center px-5 py-2 text-sm sm:text-base sm:px-8 sm:py-2.5 mx-auto mt-20 rounded-full bg-black text-white hover:bg-pink-600 shadow-2xl shadow-black/10'>مشاهده همه</button>
             </Link>
         </div>

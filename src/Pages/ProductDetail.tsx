@@ -110,7 +110,7 @@ const addFavoriteHandle = () => {
     <div>
       <Navbar />
       <div className="pt-8 px-4 sm:px-10 lg:px-14">
-        <div className="mb-8"><BreadCrumb /></div>
+        <div className="mb-8"><BreadCrumb path={`productInfo/${id}`} title={'جزئیات محصول'} /></div>
         <div className="flex justify-center gap-x-4 gap-y-14 xl:justify-between flex-wrap items-start">
           <div className="w-full justify-around xl:w-[64%] flex flex-wrap md:flex-nowrap gap-8 ">
             <div className="w-full sm:w-[70%] md:w-[47%] h-[24rem] sm:h-[27rem] flex justify-center items-center p-4 xsm:p-7 rounded-lg  border-[1px] border-gray-200">

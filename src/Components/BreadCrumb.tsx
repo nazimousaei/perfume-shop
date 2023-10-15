@@ -1,7 +1,12 @@
 import { IoIosArrowBack } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 
-export default function BreadCrumb() {
+type BreadCrumbProps = {
+    path:string;
+    title:string
+}
+
+export default function BreadCrumb({path,title}:BreadCrumbProps) {
     return (
         <div className=''>
             <ul className='flex items-center gap-x-2 text-[.95rem] text-stone3-600'>
@@ -9,11 +14,9 @@ export default function BreadCrumb() {
                     <span>خانه</span>
                     <IoIosArrowBack/>
                 </li></Link>
-                <Link to={'/product'} className=''><li className='flex items-center gap-x-2'>
-                    <span>جزيیات محصول</span>
-                    <IoIosArrowBack/>
+                <Link to={`/${path}`} className=''><li className='flex items-center gap-x-2'>
+                    <span>{title}</span>
                 </li></Link>
-
             </ul>
         </div>
     )

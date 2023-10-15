@@ -26,7 +26,6 @@ export default function Basket({setOpenBasket}:openHandleBasket) {
   },0)
 
 
-
   return (
     <div className="w-full sm:w-2/3  lg:w-[45%]  h-full p-4 xsm:p-6 fixed right-0 top-0 z-50 bg-white cursor-pointer overflow-y-auto">
       <Modal />

@@ -112,7 +112,7 @@ export default function Navbar() {
             <BiHomeSmile className='text-pink-600 text-4xl' />
             <li>خانه</li>
           </Link>
-          <Link to={'/products'} className='flex flex-col items-center justify-center gap-y-1.5'>
+          <Link to={'/products/1'} className='flex flex-col items-center justify-center gap-y-1.5'>
             <TbPerfume className='text-pink-600 text-4xl' />
             <li>محصولات</li>
           </Link>
@@ -132,30 +132,32 @@ export default function Navbar() {
       </div>
       <div className='flex items-center sm:gap-x-2'>
         <div ref={refTwo} className='relative cursor-pointer bg-black text-white p-1.5 sm:p-2 rounded-md'>
-          <BsFillBasket2Fill onClick={() => setOpenBasket(prev => !prev)} className='text-lg sm:text-[1.6rem]' />
+          <BsFillBasket2Fill onClick={() => setOpenBasket(prev => !prev)} className='text-lg xsm:text-2xl sm:text-[1.6rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute -top-4 sm:-top-3 left-5 sm:left-8 rounded-full text-white bg-pink-600'>{basketData?.length}</span>
           {openBasket && <Basket setOpenBasket={setOpenBasket} />}
         </div>
         <div ref={refThree} className='relative cursor-pointer ml-[3rem] sm:ml-20'>
-          <BiSolidBookmarkHeart onClick={() => setOpenFavorite(prev => !prev)} className='text-black text-4xl sm:text-[3.2rem]' />
+          <BiSolidBookmarkHeart onClick={() => setOpenFavorite(prev => !prev)} className='text-black text-4xl xsm:text-[2.8rem] sm:text-[3.2rem]' />
           <span className='flex items-center justify-center w-5 h-5 text-[.6rem] sm:text-base absolute left-5 sm:right-0 -top-3 sm:-top-2 rounded-full text-white bg-pink-600'>{favoritesData?.length}</span>
           {openFavorite && <Favorite setOpenFavorite={setOpenFavorite} />}
         </div>
         {mainUserCookie.length === 0 ?
           <div className='flex relative font-medium -right-[3rem] sm:-right-16'>
             < Link to={'/signin'}>
-              <button className='w-[4.5rem] sm:w-32 text-sm sm:text-base  py-1.5 sm:py-2 px-4 sm:px-7 text-start text-white bg-pink-600 shadow-md shadow-zinc-500/20 rounded-3xl'>ورود</button>
+              <button className='w-[4.5rem] xsm:w-[6rem] sm:w-32 text-sm sm:text-base  py-1.5 sm:py-2 px-4 sm:px-7 text-start text-white bg-pink-600 shadow-md shadow-zinc-500/20 rounded-3xl'>ورود</button>
             </Link>
             <Link to={'/register'}>
-              <button className=' w-[4.5rem] sm:w-32 absolute z-10 right-[3rem] sm:right-[4.5rem] text-sm sm:text-base py-1.5 sm:py-2 rounded-3xl bg-neutral-50 text-black shadow-md shadow-zinc-500/20 '>ثبت نام</button>
+              <button className=' w-[4.5rem] xsm:w-[6rem] sm:w-32 absolute z-10 right-[3rem] sm:right-[4.5rem] text-sm sm:text-base py-1.5 sm:py-2 rounded-3xl bg-neutral-50 text-black shadow-md shadow-zinc-500/20 '>ثبت نام</button>
             </Link>
           </div> :
-          <div className='flex relative font-medium -right-[3rem] sm:-right-16'>
-            <button onClick={logoutHandler} className='w-[4.5rem] sm:w-32 text-sm sm:text-base  py-1.5 sm:py-2 px-4 sm:px-7 text-start text-white bg-pink-600 shadow-md shadow-zinc-500/20 rounded-3xl'>خروج</button>
-       
-            <button className=' w-[4.5rem] sm:w-32 absolute z-10 right-[3rem] sm:right-[4.5rem] text-sm sm:text-base py-1.5 sm:py-2 rounded-3xl bg-neutral-50 text-black shadow-md shadow-zinc-500/20 '>پروفایل</button>
-         
-        </div>
+      <div className='flex relative font-medium -right-[3rem] sm:-right-16'>
+      < Link to={'/signin'}>
+        <button onClick={logoutHandler} className='w-[4.5rem] xsm:w-[6rem] sm:w-32 text-sm sm:text-base  py-1.5 sm:py-2 px-4 sm:px-7 text-start text-white bg-pink-600 shadow-md shadow-zinc-500/20 rounded-3xl'>خروج</button>
+      </Link>
+      <Link to={'/register'}>
+        <button className='w-[4.5rem] xsm:w-[6rem] sm:w-32 absolute z-10 right-[3.2rem] sm:right-[4.8rem] text-sm sm:text-base py-1.5 sm:py-2 rounded-3xl bg-neutral-50 text-black shadow-md shadow-zinc-500/20 '>{mainUserCookie}</button>
+      </Link>
+    </div>
 }
     </div>
     </div >

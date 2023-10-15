@@ -1,5 +1,6 @@
 import { BiSearchAlt } from 'react-icons/bi'
 import Navbar from './Navbar'
+import Typewriter from 'typewriter-effect';
 
 export default function Header() {
   return (
@@ -9,7 +10,17 @@ export default function Header() {
         <div className='overflow-x-hidden flex flex-col items-center justify-center md:justify-start gap-y-1rem md:pl-12 lg:pl-16 xl:pl-24 w-[100%] md:w-[30%] h-full bg-fuchsia-100'>
           <img src='/img/logo.png' className='max-w-xs lg:max-w-sm md:skew-x-[-16deg] -mt-20 md:-mt-5' alt='logo' />
           <h1 className=' text-[2.2rem] md:text-[2rem] text-black title-shadow font-Dinar font-bold tracking-wider text-center md:pr-16 lg:pr-14 xl:pr-20  skew-x-[-16deg] lg:-translate-y-7'>
-            عطر پارسیس
+          <Typewriter onInit={typewriter => {
+                    typewriter.typeString('عطر پارسیس')
+                        .start()
+                        .pauseFor(2000)
+                        .deleteAll()
+                }}
+                    options={{
+
+                        loop: true
+                    }}
+                />
           </h1>
           <div className='flex rounded-2xl w-4/5 items-center mt-20 md:mt-10 lg:mt-7 md:mr-16 xl:mr-32 md:skew-x-[-16deg] shadow-lg shadow-black-20'>
             <BiSearchAlt className='text-white bg-black h-[2.75rem] w-14 py-1 rounded-s-2xl ' />

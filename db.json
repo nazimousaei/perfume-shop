@@ -321,6 +321,14 @@
       "price": 5600000,
       "count": 1,
       "src": "/img/perf-21.png"
+    },
+    {
+      "id": 20,
+      "name": "آمبر نویر ادوپرفیوم مردانه",
+      "title": "lalique",
+      "price": 9800000,
+      "count": 1,
+      "src": "/img/perf-20.png"
     }
   ],
   "favorites": [
