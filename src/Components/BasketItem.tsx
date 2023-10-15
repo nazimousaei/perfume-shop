@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { deleteBasketServer } from '../Redux/Store/Basket'
 import { putBasketServer } from '../Redux/Store/Basket'
 import { AppDispatch } from '../Redux/Store'
-import swal from 'sweetAlert'
+import swal from 'sweetalert'
 
 export default function BasketItem(Props: basketItem) {
 
@@ -18,7 +18,8 @@ export default function BasketItem(Props: basketItem) {
     swal({
       title: 'آیا از حذف اطمینان دارید ؟',
       icon: 'warning',
-      buttons: ['خیر', 'بله']
+      buttons: ['خیر', 'بله'],
+      className:'swal-footer'
 
     }).then(result => {
       if (result) {
@@ -26,7 +27,8 @@ export default function BasketItem(Props: basketItem) {
         swal({
           title: 'با موفقیت حذف شد',
           icon: 'success',
-          buttons: ['بستن', 'تایید']
+          buttons:'بستن' as any,
+          className:'swal-footer'
         })
       }
     })

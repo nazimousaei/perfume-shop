@@ -1,5 +1,5 @@
 export type userRegisterType = {
-    id:number;
+    id:string;
     username:string;
     phone:string;
     password:string;

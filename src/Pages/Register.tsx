@@ -5,10 +5,12 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import registerSchema from "../Validations/RegisterSchema"
 import { useNavigate } from "react-router-dom"
 import { userRegisterType } from "../TypeScriptTypes/UserRegisterTypes"
-import { useDispatch ,useSelector} from "react-redux"
-import { AppDispatch ,RootState} from "../Redux/Store"
+import { useDispatch, useSelector } from "react-redux"
+import { AppDispatch, RootState } from "../Redux/Store"
 import { postUsersServer } from "../Redux/Store/UserRegister"
-import swal from 'sweetAlert'
+import { getUsersServer } from "../Redux/Store/UserRegister"
+import swal from "sweetalert"
+import { useEffect } from "react"
 
 type FormValues = {
   username: string;
@@ -20,10 +22,14 @@ type FormValues = {
 export default function Register() {
 
   const navigation = useNavigate()
+
+  const getUserDispatch = useDispatch<AppDispatch>()
   const postUserDispatch = useDispatch<AppDispatch>()
   const dataUsers: any = useSelector<RootState>(state => state.usersRegister)
+ 
 
-  const { register, handleSubmit,getValues ,reset, formState: { errors } } = useForm({
+  //form state management
+  const { register, handleSubmit, getValues, reset, formState: { errors } } = useForm({
     defaultValues: {
       username: '',
       phone: '',
@@ -34,38 +40,66 @@ export default function Register() {
   })
 
 
- const setCookieUser = ()  => {
+  useEffect(() => {
+    //get user from server and save users in store
+    getUserDispatch(getUsersServer())
 
-  const now = new Date()
-  let expireDay = now.setTime(now.getTime()+10*24*60*60*1000)
-  document.cookie = `username=${getValues(['username'])};path=/;expires=${now}`
- }
+  }, [])
+
+
+  //set cookie for new user
+  const setCookieUser = () => {
+    const now = new Date()
+    let expireDay = now.setTime(now.getTime() + 10 * 24 * 60 * 60 * 1000)
+    document.cookie = `username=${getValues(['username'])};path=/;expires=${now}`
+  }
 
   const formSubmitting = (data: FormValues) => {
 
     const newUser: userRegisterType = {
-      id:dataUsers.length+1,
+      id: crypto.randomUUID(),
       username: data.username,
       phone: data.phone,
       password: data.password,
       repeatPassword: data.password
     }
 
-    postUserDispatch(postUsersServer(newUser))
-     
-    setCookieUser()
 
-    swal({
-      title: 'ثبت نام با موفقیت انجام شد',
-      icon: 'success',
-      buttons: ['بستن', 'رفتن به صفحه اصلی']
+    dataUsers.map((user: userRegisterType) => {
 
-    }).then(result => {
-      if (result) {
-        navigation('/')
+      if (user.phone != data.phone) {
+
+        postUserDispatch(postUsersServer(newUser))
+        setCookieUser()
+
+        swal({
+          title: 'ثبت نام با موفقیت انجام شد',
+          icon: 'success',
+          buttons: ['بستن', 'رفتن به صفحه اصلی'],
+          className: 'swal-footer'
+
+        }).then(result => {
+          if (result) {
+            navigation('/')
+          }
+        })
+
+      } else {
+
+        swal({
+          title: 'با این شماره از قبل ثبت نام کرده اید',
+          icon: 'error',
+          buttons: ['بستن', 'صفحه لاگین'],
+          className: 'swal-footer'
+        }).then(result => {
+          if (result) {
+            navigation('/singin')
+          }
+        })
+
       }
-    })
 
+    })
     reset()
   }
 

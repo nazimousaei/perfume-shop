@@ -3,7 +3,7 @@ import { favoriteItem } from '../TypeScriptTypes/FavoritesTypes'
 import { useDispatch } from 'react-redux'
 import { deleteFavoritesServer } from '../Redux/Store/FavoriteList'
 import { AppDispatch } from '../Redux/Store'
-import swal from 'sweetAlert'
+import swal from 'sweetalert'
 
 export default function FavoriteItem(Props: favoriteItem) {
 
@@ -13,7 +13,8 @@ export default function FavoriteItem(Props: favoriteItem) {
     swal({
       title: 'آیا از حذف اطمینان دارید ؟',
       icon: 'warning',
-      buttons: ['خیر', 'بله']
+      buttons: ['خیر', 'بله'],
+      className:'swal-footer'
 
     }).then(result => {
       if (result) {
@@ -21,7 +22,8 @@ export default function FavoriteItem(Props: favoriteItem) {
         swal({
           title:'با موفقیت حذف شد',
           icon:'success',
-          buttons:['بستن','تایید']
+          buttons:'بستن' as any,
+          className:'swal-footer'
         })
       }
     })

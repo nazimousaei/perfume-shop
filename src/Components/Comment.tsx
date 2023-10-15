@@ -16,10 +16,10 @@ export default function Comment(Props:allCommentGetServer) {
                     </div>
                     <div className='flex gap-x-1.5 items-start pt-5 text-yellow-300 text-xl'>
                         {Array(Props?.star).fill(0).map(() => (
-                            <AiFillStar  />
+                            <AiFillStar key={crypto.randomUUID()} />
                         ))}
                         {Array(5 - Props?.star).fill(0).map(() => (
-                            <AiOutlineStar />
+                            <AiOutlineStar key={crypto.randomUUID()} />
                         ))}
                     </div>
                 </div>

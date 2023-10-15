@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { userRegisterType } from '../../TypeScriptTypes/UserRegisterTypes'
+import swal from 'sweetalert'
 
 
 export const getUsersServer = createAsyncThunk(
@@ -39,10 +40,14 @@ const slice = createSlice({
             return action.payload
         })
         builder.addCase(postUsersServer.fulfilled, (state, action) => {
-            const result = state.some(item => action.payload.id === item.id)
+            const result = state.some(item => action.payload.phone === item.phone)
             if (!result) {
                 return [...state,action.payload]
+            }else{
+            
+               return state
             }
+            
         })
     },
 })

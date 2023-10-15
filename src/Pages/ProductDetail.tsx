@@ -29,7 +29,7 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 //sweetaler
-import swal from 'sweetAlert'
+import swal from "sweetalert"
 
 //type of useparams hook
 type param = {
@@ -73,7 +73,8 @@ export default function ProductDetail() {
     swal({
         title: 'محصول با موفقیت به سبد خرید افزوده شد',
         icon: 'success',
-        buttons: ['بستن', 'تایید']
+        buttons:'بستن' as any,
+        className:'swal-footer'
     })
 
 }
@@ -107,7 +108,7 @@ export default function ProductDetail() {
                 <p className="font-semibold text-lg text-stone-700">  امتیاز:</p>
                 <div className="flex gap-x-1.5">
                   {Array(productInfoData?.star)?.fill(0)?.map(() => (
-                    <AiFillStar className='text-yellow-300 text-xl' />
+                    <AiFillStar key={crypto.randomUUID()} className='text-yellow-300 text-xl' />
                   ))} 
                    {/* {Array(5-productInfoData?.star)?.fill(0)?.map(() => (
                     <AiOutlineStar className='text-yellow-300 text-xl' />
@@ -117,7 +118,7 @@ export default function ProductDetail() {
               <div className="flex items-center flex-wrap gap-4 sm:gap-x-10 pt-8">
                 <p className="font-semibold text-lg text-stone-700">حجم عطر :</p>
                 <form className="flex items-center gap-x-2 text-sm xsm:text-base">
-                  <input type="radio" checked name="perf" id='perf-1' className="accent-black" />
+                  <input type="radio" defaultChecked name="perf" id='perf-1' className="accent-black" />
                   <label htmlFor='perf-1' className="w-12 xsm:w-16">
                     <img src="/img/perf-1.png" />
                     <p className="font-semibold text-pink-600 text-cener">۱۰۰ میل</p>

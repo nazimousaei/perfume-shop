@@ -256,17 +256,16 @@
       "body": "خوبه",
       "user": "نازی",
       "star": 4
+    },
+    {
+      "id": 9,
+      "title": "عالی",
+      "body": "عطر مورد علاقم",
+      "user": "سامیار",
+      "star": 4
     }
   ],
   "basket": [
-    {
-      "id": 16,
-      "name": "کوکو شنل کدوپرفیوم زنانه",
-      "title": "chanel",
-      "price": 1000000,
-      "count": 2,
-      "src": "/img/perf-16.png"
-    },
     {
       "id": 11,
       "name": "بور بری بادی ادوپرفیوم زنانه",
@@ -290,22 +289,38 @@
       "price": 5600000,
       "count": 1,
       "src": "/img/perf-18.png"
+    },
+    {
+      "id": 16,
+      "name": "کوکو شنل کدوپرفیوم زنانه",
+      "title": "chanel",
+      "price": 1000000,
+      "count": 1,
+      "src": "/img/perf-16.png"
+    },
+    {
+      "id": 1,
+      "name": "میس دیور ادوپرفیوم زنانه",
+      "title": "miss-dior",
+      "price": 5600000,
+      "count": 1,
+      "src": "/img/perf-1.png"
     }
   ],
   "favorites": [
-    {
-      "id": 19,
-      "name": "اوپرا ادوپرفیوم مردانه",
-      "title": "sospiro",
-      "price": 8700000,
-      "src": "/img/perf-19.png"
-    },
     {
       "id": 17,
       "name": "توسکان ادوپرفیوم زنانه",
       "title": "tom-ford",
       "price": 1100000,
       "src": "/img/perf-17.png"
+    },
+    {
+      "id": 3,
+      "name": "دیلن بلو ادوپرفیوم مردانه",
+      "title": "versace",
+      "price": 4200000,
+      "src": "/img/perf-3.png"
     }
   ],
   "productInfo": [
@@ -736,18 +751,18 @@
   ],
   "users": [
     {
-      "id": 1,
-      "username": "nazi",
+      "id": "628c8f7e-5214-40b1-ba4b-5b7ace915795",
+      "username": "pr777",
       "phone": "09100721833",
       "password": "Pr_7777777",
       "repeatPassword": "Pr_7777777"
     },
     {
-      "id": 2,
-      "username": "akbar",
-      "phone": "09122893834",
-      "password": "Ak_777777",
-      "repeatPassword": "Ak_777777"
+      "id": "e77e650e-1680-47c9-9570-1671fc071609",
+      "username": "nazi",
+      "phone": "09056819742",
+      "password": "Nr_7777777",
+      "repeatPassword": "Nr_7777777"
     }
   ]
 }

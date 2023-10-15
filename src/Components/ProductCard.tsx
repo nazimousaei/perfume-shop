@@ -8,7 +8,7 @@ import { AppDispatch } from '../Redux/Store'
 import { postFavoritesServer } from '../Redux/Store/FavoriteList'
 import { postBasketServer } from '../Redux/Store/Basket'
 import { basketItem } from '../TypeScriptTypes/BasketTypes'
-import swal from 'sweetAlert'
+import swal from 'sweetalert'
 
 
 export default function ProductCard(Props: allProductGetServer) {
@@ -31,7 +31,8 @@ export default function ProductCard(Props: allProductGetServer) {
         swal({
             title: 'محصول با موفقیت به لیست علاقه مندی ها افزوده شد',
             icon: 'success',
-            buttons: ['بستن', 'تایید']
+            buttons:'بستن' as any,
+            className:'swal-footer'
         })
 
     }
@@ -52,7 +53,8 @@ export default function ProductCard(Props: allProductGetServer) {
         swal({
             title: 'محصول با موفقیت به لیست علاقه مندی ها افزوده شد',
             icon: 'success',
-            buttons: ['بستن', 'تایید']
+            buttons:'بستن' as any,
+            className:'swal-footer'
         })
 
     }

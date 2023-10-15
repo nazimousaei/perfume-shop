@@ -8,14 +8,9 @@ export default {
         'Dirooz': ['Dirooz'],
         'Dinar': ['Dinar']
       },
-      colors: {
-        lightOrange: '#fed9ad',
-        lightPink: '#ffe7cb80'
-      },
       screens: {
         '2xsm': '100px',
         'xsm': '400px',
-        'xmd':'900px'
       }
     },
   },

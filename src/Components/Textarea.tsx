@@ -3,7 +3,7 @@ import { allCommentGetServer } from "../TypeScriptTypes/CommentTypes"
 import { useDispatch, useSelector } from "react-redux"
 import { AppDispatch, RootState } from "../Redux/Store"
 import { postCommentsServer } from "../Redux/Store/Comments"
-import swal from 'sweetAlert'
+import swal from "sweetalert"
 
 export default function Textarea() {
   const [username, setUsename] = useState<string>('')
@@ -31,7 +31,8 @@ export default function Textarea() {
       swal({
         title: 'نظر شما با موفقیت ثبت شد',
         icon: 'success',
-        buttons: ['بستن', 'تایید']
+        buttons:'بستن'as any,
+        className:'swal-footer'
       })
 
       setUsename('')
@@ -41,7 +42,8 @@ export default function Textarea() {
       swal({
         title:'لطفا تمام فیلد هارا پر کنید',
         icon:'error',
-        buttons:['بستن','تایید']
+        buttons:'بستن' as any,
+        className:'swal-footer'
       })
     }
   }

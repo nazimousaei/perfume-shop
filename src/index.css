@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
     @font-face {
         font-family: Dirooz;
         src: url(/fonts/Dirooz-FD.ttf) format(truetype);
@@ -21,12 +22,12 @@
         overflow-x: hidden;
         line-height: 2;
     } 
-
     
 }
 
 
 @layer utilities {
+
     .title-shadow {
         text-shadow: .3rem .4rem .3rem #ec489a6c;
     }
@@ -70,15 +71,16 @@
     }
 
    .swal-footer{
-        text-align:center !important;
-    }
+    text-align: center !important;
+  
+   }  
 }
 
 @layer components {
 
     .header {
         overflow: hidden;
-        background-image: linear-gradient(245deg, rgba(249, 213, 184, 0.247), rgba(254, 218, 173, 0.29)), url('./img/header.jpg');
+        background-image: linear-gradient(245deg, rgba(249, 213, 184, 0.247), rgba(254, 218, 173, 0.29)), url('/img/header.jpg');
         background-repeat: no-repeat;
         background-position: right 35%;
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
