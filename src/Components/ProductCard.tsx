@@ -51,7 +51,7 @@ export default function ProductCard(Props: allProductGetServer) {
         dispatchPostBasketItem(postBasketServer(newItemBasket))
 
         swal({
-            title: 'محصول با موفقیت به لیست علاقه مندی ها افزوده شد',
+            title: 'محصول با موفقیت به سبد خرید افزوده شد',
             icon: 'success',
             buttons:'بستن' as any,
             className:'swal-footer'

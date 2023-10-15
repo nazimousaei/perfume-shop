@@ -87,15 +87,15 @@ export default function Navbar() {
       document.removeEventListener('mousedown', closeBasketHandle)
       document.removeEventListener('mousedown', closeFavoriteHandle)
     }
-  }, [ref, refTwo, refThree,getUserFromCookie])
+  }, [ref, refTwo, refThree,getUserFromCookie,logoutHandler])
 
 
 
- const logoutHandler = () => {
+ function logoutHandler () {
   const now = new Date()
   now.setTime(now.getTime()-20*24*60*60*1000)
-  document.cookie =`username = ${mainUserCookie};path=/;expire${now}`
- 
+  document.cookie =`username=;path=/;expire${now}`
+  setMainUserCookie('')
 
  }
 

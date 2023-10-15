@@ -49,7 +49,6 @@ export default function BasketItem(Props: basketItem) {
       src: Props.src
     }
     editBasketCount(putBasketServer(editBasket))
-
   }
 
 
@@ -67,7 +66,6 @@ export default function BasketItem(Props: basketItem) {
     }
 
     editBasketCount(putBasketServer(editBasket))
-
   }
 
   return (

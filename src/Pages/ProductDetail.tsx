@@ -18,12 +18,14 @@ import { AiFillStar } from 'react-icons/ai'
 import { allCommentGetServer } from "../TypeScriptTypes/CommentTypes"
 import { infoProductGetServer } from "../TypeScriptTypes/InfoProductTypes"
 import { basketItem } from "../TypeScriptTypes/BasketTypes"
+import { favoriteItem } from "../TypeScriptTypes/FavoritesTypes"
 //react-redux & redux-toolkit
 import { useDispatch, useSelector } from "react-redux"
 import { getCommentsServer } from "../Redux/Store/Comments"
 import { getProductInfoServer } from "../Redux/Store/ProductDetal"
 import { AppDispatch, RootState } from "../Redux/Store"
 import { postBasketServer } from '../Redux/Store/Basket'
+import { postFavoritesServer } from "../Redux/Store/FavoriteList"
 //react & react-router-dom
 import { useState } from "react"
 import { useParams } from "react-router-dom"
@@ -41,6 +43,7 @@ export default function ProductDetail() {
   const [btnActive, setBtnActive] = useState<string>('btn1')
 
   const dispatchPostBasketItem = useDispatch<AppDispatch>()
+  const dispatchPostFavoriteItem = useDispatch<AppDispatch>()
 
   const { id } = useParams<param>()
 
@@ -79,6 +82,29 @@ export default function ProductDetail() {
 
 }
 
+
+const addFavoriteHandle = () => {
+
+  const newItemFavorite: favoriteItem = {
+    id: productInfoData.id,
+    name: productInfoData.name,
+    title: productInfoData.title,
+    price: productInfoData.price,
+    src: productInfoData.src
+  }
+
+  dispatchPostFavoriteItem(postFavoritesServer(newItemFavorite))
+
+  swal({
+      title: 'محصول با موفقیت به لیست علاقه مندی ها افزوده شد',
+      icon: 'success',
+      buttons:'بستن' as any,
+      className:'swal-footer'
+  })
+ }
+
+
+ 
 
   return (
     <div>
@@ -164,7 +190,7 @@ export default function ProductDetail() {
                   <div className="bg-white text-black w-10 h-6 xsm:w-16 xsm:h-8 text-base flex justify-center items-center">1</div>
                   <button className="bg-black text-white w-10 h-6 xsm:w-14 xsm:h-8 flex justify-center items-center text-3xl rounded-e-md">-</button>
                 </div>
-                <div className=" rounded-lg p-2 cursor-pointer">
+                <div onClick={addFavoriteHandle} className=" rounded-lg p-2 cursor-pointer">
                   <FiHeart className='text-pink-600 text-3xl font-semibold' />
                 </div>
               </div>

@@ -50,10 +50,11 @@ export default function Register() {
   //set cookie for new user
   const setCookieUser = () => {
     const now = new Date()
-    let expireDay = now.setTime(now.getTime() + 10 * 24 * 60 * 60 * 1000)
+    now.setTime(now.getTime() + 10 * 24 * 60 * 60 * 1000)
     document.cookie = `username=${getValues(['username'])};path=/;expires=${now}`
   }
 
+  
   const formSubmitting = (data: FormValues) => {
 
     const newUser: userRegisterType = {
