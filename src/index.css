@@ -75,9 +75,7 @@
   
    }  
 
-}
 
-@layer components {
 
     .header {
         overflow: hidden;
@@ -87,6 +85,10 @@
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
         direction: ltr;
     }
+}
+
+@layer components {
+
 
     .title-section {
         @apply font-bold text-center xsm:text-start text-2xl md:text-[1.55rem] tracking-wide relative before:content-[url('/img/title.png')] before:absolute before:-bottom-14 before:right-[12px] before:w-full

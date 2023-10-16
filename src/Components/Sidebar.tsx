@@ -17,7 +17,7 @@ export default function Sidebar({setOpenSidebar}:openHandleType) {
             <span className="absolute top-3 left-8 bg-pink-600 text-white text-3xl rounded-md" onClick={() => setOpenSidebar(false)}><IoMdClose/></span>
             <div className="flex flex-col justify-center items-center text-white  font-Dinar h-auto p-2 ">
                 <img src="/img/logo.png" className="shadow-img " alt='logo' />
-                <div className='w-[95%] mt-2 h-14 flex rounded-2xl items-center shadow-lg shadow-black-20'>
+                <div className='w-[95%] h-14 flex rounded-2xl items-center mt-2  shadow-lg shadow-black-20'>
             <BiSearchAlt className='text-white bg-black h-full w-16 py-1 rounded-s-2xl ' />
             <input type='text ' placeholder='جست و جو ...'
               className='w-[89%] bg-pink-50 px-2 xl:px-4 h-full rounded-e-2xl placeholder-black outline-0 text-black' />

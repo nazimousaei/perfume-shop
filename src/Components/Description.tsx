@@ -2,9 +2,9 @@
 export default function Description() {
     return (
         <div className="flex flex-col md:flex-row justify-between relative">
-            <div className="w-[20%] h-[70%]  rounded-full absolute -right-12 top-0 opacity-70 bg-sky-100 -z-10 blur-3xl"></div>
-            <div className="w-[20%] h-[90%] md:h-[40%]  rounded-full absolute right-1/2 md:right-1/3 top-0 opacity-60 bg-pink-200 -z-10 blur-3xl"></div>
-            <div className="w-[30%] h-[80%]  rounded-full absolute -left-12 bottom-[20%] opacity-70 bg-lime-200 -z-10 blur-3xl"></div>
+            <div className="w-1/5 h-[70%]  rounded-full absolute -right-12 top-0 opacity-70 bg-sky-100 -z-10 blur-3xl"></div>
+            <div className="w-1/5 h-[90%] md:h-2/5  rounded-full absolute right-1/2 md:right-1/3 top-0 opacity-60 bg-pink-200 -z-10 blur-3xl"></div>
+            <div className="w-[30%] h-4/5  rounded-full absolute -left-12 bottom-1/5 opacity-70 bg-lime-200 -z-10 blur-3xl"></div>
 
             <div className='w-full md:w-1/2 flex flex-col  pt-28 px-7 xsm:px-14'>
                 <h3 className='font-bold text-xl'>چگونگی توصیف رایحه پرفیوم و عطر</h3>
@@ -34,9 +34,9 @@ export default function Description() {
 
             </div>
             <div className='w-full md:w-1/2 lg:w-[42%] pt-28 px-7 xsm:px-14 flex flex-col justify-center items-center '>
-                <img src='public/img/pic-5.jpg' className='h-[190px] md:h-[250px] w-[70%] xsm:w-[65%] custom-img-1' alt='perfume'/>
-                <img src='public/img/pic-8.jpg' className='h-[290px] md:h-[350px] md:w-[100%] w-full  xsm:w-[86%] rounded-3xl custom-img my-4' alt='perfume'/>
-                <img src='public/img/pic-7.jpg' className='h-[190px] md:h-[250px] w-[70%] xsm:w-[65%] custom-img-1 md:self-start' alt='perfume'/>
+                <img src='/img/pic-5.jpg' className='h-[190px] md:h-[250px] w-[70%] xsm:w-[65%] custom-img-1' alt='perfume'/>
+                <img src='/img/pic-8.jpg' className='h-[290px] md:h-[350px] md:w-[100%] w-full  xsm:w-[86%] rounded-3xl custom-img my-4' alt='perfume'/>
+                <img src='/img/pic-7.jpg' className='h-[190px] md:h-[250px] w-[70%] xsm:w-[65%] custom-img-1 md:self-start' alt='perfume'/>
             </div>
         </div>
     )

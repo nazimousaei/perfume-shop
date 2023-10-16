@@ -27,10 +27,14 @@ export default function Favorite({ setOpenFavorite }: openHandleFavorite) {
       <Modal />
       <span className="absolute top-3 left-8 bg-black text-white text-3xl rounded-md" onClick={() => setOpenFavorite(false)}><IoMdClose /></span>
       <div className="flex flex-col gap-y-7 justify-center mt-10">
-
-        {favoritessData?.map((favorite: favoriteItem) => (
-          <FavoriteItem key={favorite.id} {...favorite} />
-        ))}
+        {favoritessData.length === 0 ?
+          <div className="w-1/2 mx-auto text-center mt-40">
+            <img src="/img/favorite.png" alt="expety-basket" />
+            <h4 className="text-pink-400 pt-10 text-2xl font-Dinar">هنوز مورد علاقه ای ندارید</h4>
+          </div> :
+          favoritessData?.map((favorite: favoriteItem) => (
+            <FavoriteItem key={favorite.id} {...favorite} />
+          ))}
 
       </div>
     </div>

@@ -61,11 +61,11 @@ export default function ProductCard(Props: allProductGetServer) {
 
     return (
         <>
-            <div className='relative  h-[250px] flex justify-center items-center bg-neutral-100 rounded-t-lg '>
+            <div className='flex justify-center items-center relative h-[250px]  bg-neutral-100 rounded-t-lg '>
                 <FaHeart onClick={() => addFavoriteHandle()} className='absolute top-6 right-6 cursor-pointer text-3xl text-red-500' />
                 <img src={Props.src} className='w-1/2 h-2/3 drop-shadow-xl' alt='product' />
             </div>
-            <div className='p-3 flex flex-col gap-y-3 justify-between items-center rounded-b-lg bg-white'>
+            <div className='flex flex-col gap-y-3 justify-between items-center p-3 rounded-b-lg bg-white'>
                 <Link to={`/productInfo/${Props.id}`}> <h3 className='font-semibold text-center font-mono tracking-wide'>
                     {Props.name}
                     <span className='block text-center pt-1 text-md font-medium'>{Props.title}</span>

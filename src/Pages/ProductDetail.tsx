@@ -186,9 +186,9 @@ const addFavoriteHandle = () => {
               <p className="text-xl xsm:text-2xl text-pink-600 "> تومان {productInfoData?.price?.toLocaleString()}</p>
               <div className="flex items-center justify-between pt-5">
                 <div className="flex">
-                  <button className="bg-black text-white w-10 h-6 xsm:w-14 xsm:h-8 flex justify-center items-center text-lg xsm:text-xl rounded-s-md">+</button>
-                  <div className="bg-white text-black w-10 h-6 xsm:w-16 xsm:h-8 text-base flex justify-center items-center">1</div>
-                  <button className="bg-black text-white w-10 h-6 xsm:w-14 xsm:h-8 flex justify-center items-center text-3xl rounded-e-md">-</button>
+                  <button className="flex justify-center items-center w-10 h-6 xsm:w-14 xsm:h-8  bg-black text-white text-lg xsm:text-xl rounded-s-md">+</button>
+                  <div className="flex justify-center items-center w-10 h-6 xsm:w-16 xsm:h-8 text-base bg-white text-black">1</div>
+                  <button className="flex justify-center items-center w-10 h-6 xsm:w-14 xsm:h-8  bg-black text-white  text-3xl rounded-e-md">-</button>
                 </div>
                 <div onClick={addFavoriteHandle} className=" rounded-lg p-2 cursor-pointer">
                   <FiHeart className='text-pink-600 text-3xl font-semibold' />

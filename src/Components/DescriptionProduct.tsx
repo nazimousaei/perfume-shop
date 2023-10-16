@@ -1,7 +1,7 @@
 
 export default function DescriptionProduct() {
     return (
-        <div className='text-justify leading-9  sm:leading-10 text-base sm:text-lg px-4 '>
+        <div className='text-justify leading-9 sm:leading-10 text-base sm:text-lg px-4 '>
             <p className=''>
                 ادوپرفیوم ایوسن لورن لیبره از محصولات تقریبا جدید و نوظهور کمپانی فرانسوی ایوسن لورن است که حدود دو سال پیش؛ یعنی سال 2019، به بازار جذاب و وسوه‌انگیز و عطر و ادوکلن‌های زنانه معرفی و عرضه شد. Libre در زبان فرانسوی به معنای آزادی است و همانطور که از نام این ادوپرفیوم زنانه برمی‌آید؛ کمپانی ایوسن لورن آن را در قالبی از روح آزاده زنان اصیل و مستقل امروزی رونمایی کرد.
 
