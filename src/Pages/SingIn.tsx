@@ -94,7 +94,7 @@ export default function SingIn() {
   return (
     <>
       <Navbar />
-      <div className="relative w-full h-[90.4vh] sm:h-[86.4vh] lg:h-[84.8vh] flex justify-center md:justify-between items-center sm:mt-[.83rem]">
+      <div className="relative overflow-hidden w-full h-[90.4vh] sm:h-[86.4vh] lg:h-[84.8vh] flex justify-center md:justify-between items-center sm:mt-[.83rem]">
         <img src="/img/pic-18.png" className="invisible md:visible absolute right-0 -z-20  h-[80vh] w-full md:w-1/2 lg:w-[44%] drop-shadow-img px-10" />
         <img src="/img/pic-2.jpg" className="w-full h-full md:invisible" />
 

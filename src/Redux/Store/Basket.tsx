@@ -4,7 +4,7 @@ import { basketItem } from '../../TypeScriptTypes/BasketTypes'
 export const getBasketServer = createAsyncThunk(
     "basket/getBasket",
     async () => {
-        const response = await fetch('http://localhost:3000/basket')
+        const response = await fetch('https://db-perfume.liara.run/basket')
         const data = await response.json()
         return data as basketItem[]
     }
@@ -13,7 +13,7 @@ export const getBasketServer = createAsyncThunk(
 export const postBasketServer = createAsyncThunk(
     "basket/postBasket",
     async (product: basketItem) => {
-        const response = await fetch('http://localhost:3000/basket', {
+        const response = await fetch('https://db-perfume.liara.run/basket', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -28,7 +28,7 @@ export const postBasketServer = createAsyncThunk(
 export const putBasketServer = createAsyncThunk(
     "basket/putBasket",
     async (product: basketItem) => {
-        const response = await fetch(`http://localhost:3000/basket/${product.id}`, {
+        const response = await fetch(`https://db-perfume.liara.run/basket/${product.id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json'
@@ -43,7 +43,7 @@ export const putBasketServer = createAsyncThunk(
 export const deleteBasketServer = createAsyncThunk(
     "basket/deleteBasket",
     async (productID: number) => {
-        const response = await fetch(`http://localhost:3000/basket/${productID}`, {
+        const response = await fetch(`https://db-perfume.liara.run/basket/${productID}`, {
             method: 'DELETE'
         })
         const data = await response.json()
@@ -58,6 +58,7 @@ const slice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getBasketServer.fulfilled, (state, action) => {
+            console.log(state)
             return action.payload
         })
         builder.addCase(postBasketServer.fulfilled, (state, action) => {

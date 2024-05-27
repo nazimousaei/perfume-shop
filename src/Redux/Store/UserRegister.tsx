@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { userRegisterType } from '../../TypeScriptTypes/UserRegisterTypes'
-import swal from 'sweetalert'
+
 
 
 export const getUsersServer = createAsyncThunk(
     "users/getUsers",
     async () => {
-        const response = await fetch('http://localhost:3000/users')
+        const response = await fetch('https://db-perfume.liara.run/users')
         const data = await response.json()
         return data as userRegisterType[]
     }
@@ -15,7 +15,7 @@ export const getUsersServer = createAsyncThunk(
 export const postUsersServer = createAsyncThunk(
     "users/postUsers",
     async (newUser:userRegisterType) => {
-        const response = await fetch('http://localhost:3000/users', {
+        const response = await fetch('https://db-perfume.liara.run/users', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -37,6 +37,7 @@ const slice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getUsersServer.fulfilled, (state, action) => {
+            console.log(state)
             return action.payload
         })
         builder.addCase(postUsersServer.fulfilled, (state, action) => {

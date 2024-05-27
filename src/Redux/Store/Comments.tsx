@@ -5,7 +5,7 @@ import {allCommentGetServer} from '../../TypeScriptTypes/CommentTypes'
 export const getCommentsServer = createAsyncThunk(
     "comments/getComments",
     async() => {
-        const response = await fetch('http://localhost:3000/comments')
+        const response = await fetch('https://db-perfume.liara.run/comments')
         const data = await response.json()
         return data as allCommentGetServer[] 
     }
@@ -14,7 +14,7 @@ export const getCommentsServer = createAsyncThunk(
 export const postCommentsServer = createAsyncThunk(
     "comments/postComments",
     async(newComment:allCommentGetServer) => {
-        const response = await fetch('http://localhost:3000/comments',{
+        const response = await fetch('https://db-perfume.liara.run/comments',{
             method:'POST',
             headers:{
                 'Content-type':'application/json'
@@ -33,6 +33,7 @@ const slice = createSlice({
     reducers:{},
     extraReducers: (builder) => {
         builder.addCase(getCommentsServer.fulfilled, (state, action) => {
+            console.log(state)
            return action.payload
         })
         builder.addCase(postCommentsServer.fulfilled, (state, action) => {

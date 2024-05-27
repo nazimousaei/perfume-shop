@@ -13,7 +13,7 @@ export default function AllProduct() {
 
 
     useEffect(() => {
-        dispatch(getProductsServer('http://localhost:3000/products'))
+        dispatch(getProductsServer('https://db-perfume.liara.run/products'))
     }, [])
 
     return (

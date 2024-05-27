@@ -16,7 +16,7 @@ export default function BestSelling() {
     const productsData = useSelector<RootState, allProductGetServer[]>((state) => state.products)
 
     useEffect(() => {
-        dispatch(getProductsServer('http://localhost:3000/products?_start=15&_end=25'))
+        dispatch(getProductsServer('https://db-perfume.liara.run/products?_start=15&_end=25'))
     }, [])
 
     return (

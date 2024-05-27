@@ -37,9 +37,8 @@ export default function Pagination({ items, itemsCount, pathname, setShowItems }
 
             {Array(pageCount).fill(0).map((btn, index) => (
 
-                  
 
-                   index + 1 === Number(page) ? (
+                   btn && index + 1 === Number(page) ? (
 
                     <Link key={crypto.randomUUID()} to={`${pathname}/${index + 1}`} className='flex justify-center items-center rounded-full bg-pink-600 hover:bg-black w-10 sm:w-16 py-1 text-white'>{index + 1}</Link>
 

@@ -5,7 +5,7 @@ import { favoriteItem } from '../../TypeScriptTypes/FavoritesTypes'
 export const getFavoritesServer = createAsyncThunk(
     "favorites/getFavorites",
     async () => {
-        const response = await fetch('http://localhost:3000/favorites')
+        const response = await fetch('https://db-perfume.liara.run/favorites')
         const data = await response.json()
         return data as favoriteItem[]
     }
@@ -14,7 +14,7 @@ export const getFavoritesServer = createAsyncThunk(
 export const postFavoritesServer = createAsyncThunk(
     "favorites/postFavorites",
     async (newFavoriteItem: favoriteItem) => {
-        const response = await fetch('http://localhost:3000/favorites', {
+        const response = await fetch('https://db-perfume.liara.run/favorites', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -30,7 +30,7 @@ export const postFavoritesServer = createAsyncThunk(
 export const deleteFavoritesServer = createAsyncThunk(
     "favorites/deleteFavorites",
     async (faviriteID:number) => {
-        const response = await fetch(`http://localhost:3000/favorites/${faviriteID}`, {
+        const response = await fetch(`https://db-perfume.liara.run/favorites/${faviriteID}`, {
             method: 'DELETE',
         })
         const data = await response.json()
@@ -46,6 +46,7 @@ const slice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getFavoritesServer.fulfilled, (state, action) => {
+            console.log(state)
             return action.payload
         })
         builder.addCase(postFavoritesServer.fulfilled, (state, action) => {

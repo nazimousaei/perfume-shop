@@ -1,10 +1,10 @@
 
 export default function Description() {
     return (
-        <div className="flex flex-col md:flex-row justify-between relative">
+        <div className="flex flex-col md:flex-row overflow-hidden justify-between relative">
             <div className="w-1/5 h-[70%]  rounded-full absolute -right-12 top-0 opacity-70 bg-sky-100 -z-10 blur-3xl"></div>
             <div className="w-1/5 h-[90%] md:h-2/5  rounded-full absolute right-1/2 md:right-1/3 top-0 opacity-60 bg-pink-200 -z-10 blur-3xl"></div>
-            <div className="w-[30%] h-4/5  rounded-full absolute -left-12 bottom-1/5 opacity-70 bg-lime-200 -z-10 blur-3xl"></div>
+            <div className=" h-4/5  rounded-full absolute -left-12 bottom-1/5 opacity-70 bg-lime-200 -z-10 blur-3xl"></div>
 
             <div className='w-full md:w-1/2 flex flex-col  pt-28 px-7 xsm:px-14'>
                 <h3 className='font-bold text-xl'>چگونگی توصیف رایحه پرفیوم و عطر</h3>

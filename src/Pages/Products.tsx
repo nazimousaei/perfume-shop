@@ -22,16 +22,16 @@ export default function Product() {
   useEffect(() => {
 
     if (btnActive === 'btn1') {
-      getDataDispatch(getProductsServer('http://localhost:3000/products'))
+      getDataDispatch(getProductsServer('https://db-perfume.liara.run/products'))
 
     } else if (btnActive === 'btn2') {
-      getDataDispatch(getProductsServer('http://localhost:3000/products?_sort=price&_order=asc'))
+      getDataDispatch(getProductsServer('https://db-perfume.liara.run/products?_sort=price&_order=asc'))
 
     } else if (btnActive === 'btn3') {
-      getDataDispatch(getProductsServer('http://localhost:3000/products?_sort=price&_order=desc'))
+      getDataDispatch(getProductsServer('https://db-perfume.liara.run/products?_sort=price&_order=desc'))
 
     } else {
-      getDataDispatch(getProductsServer('http://localhost:3000/products'))
+      getDataDispatch(getProductsServer('https://db-perfume.liara.run/products'))
     }
 
   }, [btnActive])

@@ -4,7 +4,7 @@ import {infoProductGetServer} from '../../TypeScriptTypes/InfoProductTypes'
 export const getProductInfoServer = createAsyncThunk(
     "productInfo/getProductinfo",
     async(id:string | undefined) => {
-        const response = await fetch(`http://localhost:3000/productInfo/${id}`)
+        const response = await fetch(`https://db-perfume.liara.run/productInfo/${id}`)
         const data = await response.json()
         return data as infoProductGetServer
     }
@@ -17,6 +17,7 @@ const slice = createSlice({
     reducers:{},
     extraReducers: (builder) => {
         builder.addCase(getProductInfoServer.fulfilled, (state, action) => {
+            console.log(state)
            return action.payload
         })
       },
