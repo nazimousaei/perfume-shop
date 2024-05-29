@@ -39,5 +39,21 @@
         "type": "image/jpg",
         "purpose": "maskable"
       }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "perfume"
+    },
+    {
+      "src": "/img/icons/icon-1000x1000.jpg",
+      "sizes": "1000x1000",
+      "type": "image/jpg",
+      "form_factor": "wide",
+      "label": "perfume"
+    }
   ]
 }
